@@ -1,0 +1,11 @@
+/* ejemplo de reset y estructura */
+.navbar { display: flex; align-items: center; justify-content: space-between; }
+.navbar__links { list-style: none; display: flex; gap: 1rem; }
+.navbar__toggle { display: none; }
+/* Media query para móvil */
+@media (max-width: 768px) {
+  .navbar__links { display: none; flex-direction: column; }
+  .navbar__toggle { display: block; }
+}
+.hero { display: flex; align-items: center; justify-content: center; height: 80vh; background: #f5f5f5; }
+.services__list, .extras__list { list-style: none; display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 1rem; }
