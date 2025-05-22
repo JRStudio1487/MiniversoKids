@@ -1,98 +1,138 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Miniveso Kids</title>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <!-- HEADER + NAVBAR -->
-  <header>
-    <nav class="navbar">
-      <div class="navbar__logo">Miniveso Kids</div>
-      <button class="navbar__toggle" aria-label="Abrir menú">☰</button>
-      <ul class="navbar__links">
-        <li><a href="#hero">Inicio</a></li>
-        <li><a href="#quienes-somos">Quiénes somos</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#extras">Extras</a></li>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Miniveso Kids</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- HEADER + NAVBAR -->
+    <header>
+      <nav class="navbar">
+        <div class="container navbar__container">
+          <!-- Logo -->
+          <div class="navbar__logo">Miniverso Kids</div>
 
-  <!-- CONTENIDO PRINCIPAL -->
-  <main>
-    <!-- HERO -->
-    <section id="hero" class="hero">
-      <!-- placeholder para imagen de portada -->
-      <div class="hero__content">
-        <h1>Bienvenidos a Miniveso Kids</h1>
-        <p>El mejor salón de celebraciones infantiles en Gelves (Sevilla).</p>
-      </div>
-    </section>
+          <!-- Espaciador flexible para empujar el resto a la derecha -->
+          <div class="navbar__spacer"></div>
 
-    <!-- QUIÉNES SOMOS -->
-    <section id="quienes-somos" class="about">
-      <h2>Quiénes somos</h2>
-      <p>En Miniveso Kids disponemos de un parque de bolas con toboganes y colchonetas, zona infantil y zona para adultos con barra de bar, mesas y baños perfectamente equipados.</p>
-    </section>
+          <!-- Enlaces de navegación -->
+          <ul class="navbar__links">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#quienes-somos">Quiénes somos</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#extras">Extras</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
 
-    <!-- SERVICIOS PRINCIPALES -->
-    <section id="servicios" class="services">
-      <h2>Servicios</h2>
-      <ul class="services__list">
-        <li>Alquiler de salón para cumpleaños y comuniones</li>
-        <li>Parque de bolas, toboganes y colchonetas</li>
-        <li>Zona exclusiva para adultos con barra de bar</li>
-        <li>Acceso a baños y servicios</li>
-      </ul>
-    </section>
+          <!-- Language switcher -->
+          <div class="language-switcher">
+            <!-- Bandera activa -->
+            <button
+              class="language-switcher__current"
+              aria-label="Select language"
+            >
+              <img src="assets/es.png" alt="ES" width="24" />
+            </button>
+            <!-- Dropdown con todas las opciones -->
+            <ul class="language-switcher__dropdown">
+              <li class="language-switcher__option" data-lang="es">
+                <img src="assets/es.png" alt="ES" width="24" />
+              </li>
+              <li class="language-switcher__option" data-lang="us">
+                <img src="assets/us.png" alt="US" width="24" />
+              </li>
+              <li class="language-switcher__option" data-lang="fr">
+                <img src="assets/fr.png" alt="FR" width="24" />
+              </li>
+              <li class="language-switcher__option" data-lang="it">
+                <img src="assets/it.png" alt="IT" width="24" />
+              </li>
+            </ul>
+          </div>
 
-    <!-- SERVICIOS EXTRA -->
-    <section id="extras" class="extras">
-      <h2>Servicios extra</h2>
-      <ul class="extras__list">
-        <li>Decoración personalizada</li>
-        <li>Pintacaras y animadores</li>
-        <li>Payasos y magos</li>
-        <li>Bebidas frías y catering opcional</li>
-      </ul>
-    </section>
+          <!-- Toggle móvil -->
+          <button class="navbar__toggle" aria-label="Abrir menú">☰</button>
+        </div>
+      </nav>
+    </header>
 
-    <!-- GALERÍA (placeholder) -->
-    <section id="galeria" class="gallery">
-      <h2>Galería</h2>
-      <p>Pronto añadiremos imágenes de nuestras instalaciones.</p>
-      <!-- aquí insertaras un grid de <img> -->
-    </section>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+      <!-- HERO -->
+      <section id="hero" class="hero">
+        <!-- placeholder para imagen de portada -->
+        <div class="hero__content">
+          <h1>Bienvenidos a Miniveso Kids</h1>
+          <p>El mejor salón de celebraciones infantiles en Gelves (Sevilla).</p>
+        </div>
+      </section>
 
-    <!-- CONTACTO -->
-    <section id="contacto" class="contact">
-      <h2>Contacto</h2>
-      <form class="contact__form">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" required>
+      <!-- QUIÉNES SOMOS -->
+      <section id="quienes-somos" class="about">
+        <h2>Quiénes somos</h2>
+        <p>
+          En Miniveso Kids disponemos de un parque de bolas con toboganes y
+          colchonetas, zona infantil y zona para adultos con barra de bar, mesas
+          y baños perfectamente equipados.
+        </p>
+      </section>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+      <!-- SERVICIOS PRINCIPALES -->
+      <section id="servicios" class="services">
+        <h2>Servicios</h2>
+        <ul class="services__list">
+          <li>Alquiler de salón para cumpleaños y comuniones</li>
+          <li>Parque de bolas, toboganes y colchonetas</li>
+          <li>Zona exclusiva para adultos con barra de bar</li>
+          <li>Acceso a baños y servicios</li>
+        </ul>
+      </section>
 
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje"></textarea>
+      <!-- SERVICIOS EXTRA -->
+      <section id="extras" class="extras">
+        <h2>Servicios extra</h2>
+        <ul class="extras__list">
+          <li>Decoración personalizada</li>
+          <li>Pintacaras y animadores</li>
+          <li>Payasos y magos</li>
+          <li>Bebidas frías y catering opcional</li>
+        </ul>
+      </section>
 
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-  </main>
+      <!-- GALERÍA (placeholder) -->
+      <section id="galeria" class="gallery">
+        <h2>Galería</h2>
+        <p>Pronto añadiremos imágenes de nuestras instalaciones.</p>
+        <!-- aquí insertaras un grid de <img> -->
+      </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>&copy; 2025 Miniveso Kids. Todos los derechos reservados.</p>
-    <p>Gelves (Sevilla) · Tel. 600 123 456 · info@minivesokids.es</p>
-  </footer>
+      <!-- CONTACTO -->
+      <section id="contacto" class="contact">
+        <h2>Contacto</h2>
+        <form class="contact__form">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required />
 
-  <script src="js/main.js"></script>
-</body>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje"></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>&copy; 2025 Miniveso Kids. Todos los derechos reservados.</p>
+      <p>Gelves (Sevilla) · Tel. 600 123 456 · info@minivesokids.es</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>

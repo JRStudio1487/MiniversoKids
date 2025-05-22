@@ -1,11 +1,219 @@
 /* ejemplo de reset y estructura */
-.navbar { display: flex; align-items: center; justify-content: space-between; }
+/* .navbar { display: flex; align-items: center; justify-content: space-between; }
 .navbar__links { list-style: none; display: flex; gap: 1rem; }
-.navbar__toggle { display: none; }
+.navbar__toggle { display: none; } */
 /* Media query para móvil */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .navbar__links { display: none; flex-direction: column; }
   .navbar__toggle { display: block; }
 }
 .hero { display: flex; align-items: center; justify-content: center; height: 80vh; background: #f5f5f5; }
-.services__list, .extras__list { list-style: none; display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 1rem; }
+.services__list, .extras__list { list-style: none; display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 1rem; } */
+
+/* Input group con labels que flotan */
+/* .input-group {
+  position: relative;
+  margin-bottom: var(--gap);
+}
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 1rem 0.75rem 0.25rem;
+  border: none;
+  border-radius: var(--radius);
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+}
+.input-group label {
+  position: absolute;
+  top: 1rem;
+  left: 0.75rem;
+  pointer-events: none;
+  transition: transform var(--transition), font-size var(--transition);
+  color: #f0f0f0;
+}
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:focus + label,
+.input-group textarea:not(:placeholder-shown) + label {
+  transform: translateY(-1.5rem);
+  font-size: 0.85rem;
+} */
+
+/* Botón */
+/* .btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: #fff;
+  color: var(--color-primary);
+  font-weight: var(--fw-bold);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+.btn:hover {
+  background: #f0f0f0;
+} */
+
+/* Responsive */
+/* @media (max-width: 768px) {
+  .contact__container {
+    grid-template-columns: 1fr;
+  }
+} */
+
+/* Starbim Font */
+@font-face {
+  font-family: "Starbim";
+  src: url("../assets/fonts/Starbim.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* Variables de tipografía */
+:root {
+  --font-primary: "Poppins", sans-serif;
+  --font-fun: "Bubbler One", cursive;
+  --font-logo: "Starbim", var(--font-fun);
+}
+
+/* 1. Fondo global con imagen */
+body {
+  background: url("../assets/fondo_mv.png") center/cover no-repeat fixed;
+  color: #fff; /* texto en blanco para contraste */
+}
+
+/* 2. Barra de navegación sobre fondo sólido o semitransparente */
+.navbar {
+  background: rgba(0, 0, 0, 0.8); /* negro con 80% de opacidad */
+  /* o bien un negro puro:
+     background: #000;
+  */
+  /* si quisieras usar tu color primario sólido:
+     background: var(--color-primary);
+  */
+}
+
+/* 3. Contenedor flex para el navbar */
+.navbar__container {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+/* 4. Espaciador que “empuja” los enlaces a la derecha */
+.navbar__spacer {
+  flex: 1;
+}
+
+/* 5. Enlaces a la derecha */
+.navbar__links {
+  list-style: none;
+  display: flex;
+  gap: var(--gap);
+}
+
+/* 6. Estilo de cada enlace */
+.navbar__links li a {
+  display: inline-block;                 /* imprescindible */
+  font-family: "Starbim", sans-serif;
+  font-size: 1.1rem; /* ajústalo a tu gusto */
+  color: #fff; /* asegúrate buen contraste */
+  text-decoration: none; /* quita subrayado */
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius);
+  transition: transform 0.3s ease, color 0.3s ease; /* suaviza escala y color */
+}
+
+.navbar__links li a:hover {
+  transform: scale(1.2);              /* aumenta un 10% */
+  color: var(--color-secondary);      /* cambia a tu color secundario */
+  background: rgba(255,255,255,0.1);  /* opcional, ligero fondo */
+}
+
+/* 7. Contenedor del switcher */
+.language-switcher {
+  position: relative;
+  margin-left: var(--gap);
+}
+
+/* 7.1. Botón que muestra la bandera actual */
+.language-switcher__current {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: inline-block;
+}
+.language-switcher__current img {
+  display: block;
+  transition: transform var(--transition);
+}
+.language-switcher__current:hover img {
+  transform: scale(1.1);
+}
+
+/* 7.2. Dropdown de opciones */
+.language-switcher__dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: rgba(0,0,0,0.8);
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  display: none; /* oculto por defecto */
+  z-index: 1001;
+}
+.language-switcher__dropdown.open {
+  display: block;
+}
+
+/* 7.3 Cada opción de idioma */
+.language-switcher__option {
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+}
+.language-switcher__option img {
+  display: block;
+  transition: transform var(--transition);
+}
+.language-switcher__option:hover img {
+  transform: scale(1.1);
+}
+
+/* 8. Toggle para móvil */
+.navbar__toggle {
+  display: none;
+  margin-left: var(--gap);
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive: móvil */
+@media (max-width: 768px) {
+  .navbar__links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    flex-direction: column;
+    width: 200px;
+    padding: 1rem;
+    transform: translateX(100%);
+    transition: transform var(--transition);
+  }
+  .navbar__links--open {
+    transform: translateX(0);
+  }
+  .navbar__toggle {
+    display: block;
+  }
+}
