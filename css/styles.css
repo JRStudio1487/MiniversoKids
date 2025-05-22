@@ -65,6 +65,13 @@
   }
 } */
 
+/* GENERAL */
+/* Share Tech Font Google*/
+.share-tech-regular {
+  font-family: "Share Tech", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 /* Starbim Font */
 @font-face {
   font-family: "Starbim";
@@ -75,18 +82,18 @@
 }
 /* Variables de tipografía */
 :root {
-  --font-primary: "Poppins", sans-serif;
-  --font-fun: "Bubbler One", cursive;
+  --font-primary: "Share Tech", sans-serif;
+  /* --font-fun: "Bubbler One", cursive; */
   --font-logo: "Starbim", var(--font-fun);
 }
-
-/* 1. Fondo global con imagen */
+/* Fondo global con imagen */
 body {
   background: url("../assets/fondo_mv.png") center/cover no-repeat fixed;
   color: #fff; /* texto en blanco para contraste */
 }
 
-/* 2. Barra de navegación sobre fondo sólido o semitransparente */
+/* 1. NAVBAR */
+/* 1.1. Barra de navegación sobre fondo sólido o semitransparente */
 .navbar {
   background: rgba(0, 0, 0, 0.8); /* negro con 80% de opacidad */
   /* o bien un negro puro:
@@ -96,27 +103,23 @@ body {
      background: var(--color-primary);
   */
 }
-
-/* 3. Contenedor flex para el navbar */
+/* 1.2. Contenedor flex para el navbar */
 .navbar__container {
   display: flex;
   align-items: center;
   padding: 1rem 0;
 }
-
-/* 4. Espaciador que “empuja” los enlaces a la derecha */
+/* 1.3. Espaciador que “empuja” los enlaces a la derecha */
 .navbar__spacer {
   flex: 1;
 }
-
-/* 5. Enlaces a la derecha */
+/* 1.4. Enlaces a la derecha */
 .navbar__links {
   list-style: none;
   display: flex;
   gap: var(--gap);
 }
-
-/* 6. Estilo de cada enlace */
+/* 1.5. Estilo de cada enlace */
 .navbar__links li a {
   display: inline-block;                 /* imprescindible */
   font-family: "Starbim", sans-serif;
@@ -127,20 +130,17 @@ body {
   border-radius: var(--radius);
   transition: transform 0.3s ease, color 0.3s ease; /* suaviza escala y color */
 }
-
 .navbar__links li a:hover {
   transform: scale(1.2);              /* aumenta un 10% */
   color: var(--color-secondary);      /* cambia a tu color secundario */
   background: rgba(255,255,255,0.1);  /* opcional, ligero fondo */
 }
-
-/* 7. Contenedor del switcher */
+/* 1.6. Contenedor del switcher */
 .language-switcher {
   position: relative;
   margin-left: var(--gap);
 }
-
-/* 7.1. Botón que muestra la bandera actual */
+/* 1.6.1. Botón que muestra la bandera actual */
 .language-switcher__current {
   background: none;
   border: none;
@@ -155,8 +155,7 @@ body {
 .language-switcher__current:hover img {
   transform: scale(1.1);
 }
-
-/* 7.2. Dropdown de opciones */
+/* 1.6.2. Dropdown de opciones */
 .language-switcher__dropdown {
   position: absolute;
   top: 100%;
@@ -173,8 +172,7 @@ body {
 .language-switcher__dropdown.open {
   display: block;
 }
-
-/* 7.3 Cada opción de idioma */
+/* 1.6.3 Cada opción de idioma */
 .language-switcher__option {
   padding: 0.25rem 0.75rem;
   cursor: pointer;
@@ -187,7 +185,60 @@ body {
   transform: scale(1.1);
 }
 
-/* 8. Toggle para móvil */
+/* HERO */
+/* ─── Hero “Under Construction” ─── */
+.hero {
+  position: relative;
+  height: 80vh;
+  background: url("../assets/underconstruction2.png") center/cover no-repeat fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero__overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero__content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding: 0 1rem;
+}
+.hero__content h1 {
+  font-family: 'Starbim', sans-serif;
+  font-size: clamp(2rem, 6vw, 3rem);
+  margin-bottom: 1rem;
+}
+.hero__content p {
+  font-family: 'Share Tech', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero__content .btn {
+  padding: 0.75rem 2rem;
+  background: var(--color-secondary);
+  color: #333;
+  border-radius: var(--radius);
+  font-weight: var(--fw-bold);
+  transition: background var(--transition), transform var(--transition);
+}
+.hero__content .btn:hover {
+  background: #fff;
+  transform: scale(1.05);
+}
+
+
+
+/* z. DISPOSITIVOS MOVILES */
+/* z.1. Toggle para móvil */
 .navbar__toggle {
   display: none;
   margin-left: var(--gap);
@@ -197,7 +248,7 @@ body {
   cursor: pointer;
 }
 
-/* Responsive: móvil */
+/* z.2. Responsive: móvil */
 @media (max-width: 768px) {
   .navbar__links {
     position: absolute;
