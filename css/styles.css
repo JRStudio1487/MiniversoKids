@@ -185,7 +185,7 @@ body {
   transform: scale(1.1);
 }
 
-/* HERO */
+/* 2. HERO */
 /* ─── Hero “Under Construction” ─── */
 .hero {
   position: relative;
@@ -234,6 +234,119 @@ body {
   background: #fff;
   transform: scale(1.05);
 }
+
+/* 3. ABOUT US */
+/* 3.1. About Section (“Quiénes somos”)
+.about {
+  background: rgba(0, 0, 0, 0.4); 
+  ligero overlay oscuro
+  color: #fff;
+  padding: 4rem 0;
+}
+.about__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--gap);
+}
+.about__image img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+.about__content h2 {
+  font-family: 'Starbim', sans-serif;
+  font-size: 2.25rem;
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+.about__content p {
+  font-family: 'Share Tech', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+3.2. Responsive: apila en móvil
+@media (max-width: 768px) {
+  .about__container {
+    grid-template-columns: 1fr;
+  }
+  .about__content {
+    text-align: center;
+  }
+} */
+
+/* ─── Sección “Quiénes somos” revisada ─── */
+#quienes-somos {
+  padding-top: 5rem;  /* espacio extra sobre el hero */
+}
+
+.about__slogan {
+  font-family: 'Starbim', sans-serif;
+  font-size: clamp(2rem, 6vw, 3rem);
+  color: var(--color-secondary);
+  text-align: center;
+  margin: 4rem auto 3rem;
+  padding: 0 1rem;
+}
+
+.about__text {
+  font-family: 'Share Tech', sans-serif;
+  font-size: 1.6rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+.about__text p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Contenedor del equipo */
+.team__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding-bottom: 4rem;
+}
+.team__member {
+  background: rgba(0,0,0,0.4);
+  padding: 2rem 1rem;
+  border-radius: var(--radius);
+  text-align: center;
+}
+.team__member img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+.team__member h3 {
+  font-family: 'Starbim', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+.team__member p {
+  font-family: 'Share Tech', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* Responsive: apilar en móvil */
+@media (max-width: 768px) {
+  .team__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
 
 
 
