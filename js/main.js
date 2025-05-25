@@ -58,3 +58,47 @@ document.addEventListener('DOMContentLoaded', () => {
     dropdown.classList.remove('open');
   });
 });
+
+// Back to Top button
+const backToTopBtn = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.classList.add('show');
+  } else {
+    backToTopBtn.classList.remove('show');
+  }
+});
+
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+//
+
+// Elementos
+// const backToTopBtn = document.getElementById('back-to-top');
+const serviciosSection = document.getElementById('servicios');
+
+// Intersection Observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Cuando la sección Servicios entra en el viewport
+      backToTopBtn.classList.add('fade');
+    } else {
+      backToTopBtn.classList.remove('fade');
+    }
+  });
+}, {
+  root: null,            // viewport
+  threshold: 0,          // desencadena al aparecer cualquier parte
+  rootMargin: '0px 0px -100px 0px' 
+  /* el rootMargin negativo en bottom retrasa el fade 
+     hasta que la sección esté bien dentro de la vista */
+});
+
+// Arrancamos el observer
+observer.observe(serviciosSection);
+
+
