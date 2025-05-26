@@ -102,3 +102,32 @@ const observer = new IntersectionObserver((entries) => {
 observer.observe(serviciosSection);
 
 
+// Mensaje de agradecimiento tras envio mensaje contacto
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contact-form');
+  const thanks = document.getElementById('contact-thanks');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();  // evitamos recarga
+
+    const data = new FormData(form);
+    try {
+      const res = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        thanks.style.display = 'block';
+      } else {
+        console.error('Error enviando el form:', res.statusText);
+        // aquí podrías mostrar un mensaje de error
+      }
+    } catch (err) {
+      console.error('Fetch error:', err);
+    }
+  });
+});
+
+

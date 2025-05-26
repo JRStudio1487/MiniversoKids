@@ -205,8 +205,8 @@
               <p>
                 <!-- Fiestas de cumpleaños infantiles con decoración temática,
                 animación y pastel personalizado. -->
-                Un universo de juegos y sonrisas donde cada detalle está pensado para que 
-                la imaginación de los peques vuele sin límites
+                Un universo de juegos y sonrisas donde cada detalle está pensado
+                para que la imaginación de los peques vuele sin límites
               </p>
             </div>
             <!-- Comuniones -->
@@ -216,8 +216,8 @@
               <p>
                 <!-- Celebraciones de primera comunión en un espacio elegante y
                 divertido, con menú especial. -->
-                Momentos de tradición y alegría unidos en un entorno acogedor que encanta 
-                a niños y mayores por igual
+                Momentos de tradición y alegría unidos en un entorno acogedor
+                que encanta a niños y mayores por igual
               </p>
             </div>
             <!-- Bautizos -->
@@ -227,8 +227,8 @@
               <p>
                 <!-- Reuniones familiares tras el bautizo, con catering ligero y zona
                 de juegos para niños. -->
-                Un recibimiento lleno de ternura donde la bienvenida de tu bebé se celebra 
-                con la calidez que merece
+                Un recibimiento lleno de ternura donde la bienvenida de tu bebé
+                se celebra con la calidez que merece
               </p>
             </div>
             <!-- Otras celebraciones -->
@@ -236,9 +236,9 @@
               <div class="services__icon">🎉</div>
               <h3>Otras Celebraciones</h3>
               <p>
-                Aniversarios, reuniones de amigos, fiestas temáticas o cualquier ocasión especial
-                que los mayores quieran festejar mientras tienen a los más peques disfrutando de 
-                universo de aventuras
+                Aniversarios, reuniones de amigos, fiestas temáticas o cualquier
+                ocasión especial que los mayores quieran festejar mientras
+                tienen a los más peques disfrutando de universo de aventuras
               </p>
             </div>
           </div>
@@ -279,6 +279,108 @@
           <button type="submit">Enviar</button>
         </form>
       </section> -->
+      <section id="contacto" class="contact section">
+        <div class="container">
+          <h2 class="contact__title">¡Hablemos!</h2>
+          <div class="contact__inner">
+            <!-- 1. Canales de contacto -->
+            <div class="contact__channels">
+              <ul class="contact__details">
+                <li>
+                  <span class="icon">📞</span
+                  ><a href="tel:600123456">600 123 456</a>
+                </li>
+                <li>
+                  <span class="icon">✉️</span
+                  ><a href="mailto:info@minivesokids.es"
+                    >info@minivesokids.com</a
+                  >
+                </li>
+                <li>
+                  <span class="icon"></span
+                  ><a
+                    href="https://wa.me/34600123456"
+                    target="_blank"
+                    rel="noopener"
+                    ><img class="whatsapp" src="./assets/whatsapp.png" alt=""><p>Chatea con nosotros en WhatsApp</p></a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- 2. Formulario -->
+            <form
+              class="contact__form"
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST"
+            >
+              <input type="hidden" name="_replyto" value="email" />
+              <input
+                type="hidden"
+                name="_subject"
+                value="Nuevo mensaje desde Miniverso Kids"
+              />
+              <div class="input-group">
+                <input
+                  id="nombre"
+                  name="nombre"
+                  required
+                  placeholder=" "
+                /><label for="nombre">Tu nombre</label>
+              </div>
+              <div class="input-group">
+                <input id="email" name="email" required placeholder=" " /><label
+                  for="email"
+                  >Tu email</label
+                >
+              </div>
+              <div class="input-group">
+                <input id="phone" name="phone" required placeholder=" " /><label
+                  for="phone"
+                  >Tu teléfono</label
+                >
+              </div>
+              <div class="input-group">
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  rows="4"
+                  required
+                  placeholder=" "
+                ></textarea>
+                <label for="mensaje">Tu mensaje</label>
+              </div>
+              <button type="submit" class="btn contact__btn">Enviar</button>
+            </form>
+
+            <!-- Mensaje de agradecimiento oculto -->
+            <div
+              id="contact-thanks"
+              class="contact__thanks"
+              style="display: none"
+            >
+              <p>
+                ¡Gracias por contactar! Atenderemos su solicitud a la mayor brevedad posible.
+              </p>
+            </div>
+
+            <!-- 3. Dirección + Mapa a todo ancho -->
+            <div class="contact__map-container">
+              <p class="contact__address">
+                <span class="icon">📍</span>Polígono CITEC<br />Vicente Traver y
+                Tomás 9<br />41120 Gelves (Sevilla)
+              </p>
+              <div class="contact__map">
+                <iframe
+                  src="https://www.google.com/maps?q=Calle+Vicente+Traver+y+Tomas+9,+Gelves,+Sevilla&output=embed"
+                  allowfullscreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- FOOTER -->

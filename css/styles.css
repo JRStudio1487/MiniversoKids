@@ -448,6 +448,219 @@ body {
 }
 
 
+/* 6. CONTACT */
+/* ─── Sección “Contacto” — CSS Completo Ajustado ─── */
+.contact {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 4rem 0;
+}
+
+/* Título centrado */
+.contact__title {
+  text-align: center;
+  font-family: 'Starbim', sans-serif;
+  font-size: clamp(2rem, 6vw, 3rem);
+  color: var(--color-secondary);
+  margin-bottom: 3rem;
+}
+
+/* Contenedor principal: dos columnas + una fila para el mapa */
+.contact__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "channels form"
+    "mapcont  mapcont";
+  /* gap: columna-gap fila-gap */
+  gap: var(--gap) calc(var(--gap) * 3);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* — Canales (izquierda, fila 1) — */
+.contact__channels {
+  grid-area: channels;
+}
+.contact__details {
+  font-family: 'Share Tech', sans-serif;
+  font-size: 1.3rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;           /* espacio reducido */
+}
+.contact__details li {
+  display: flex;
+  align-items: center;
+}
+.contact__details .icon {
+  margin-right: 0.5rem;
+  font-size: 1.25rem;
+}
+/* Igualar tamaño de imagen de WhatsApp al resto de iconos */
+.contact__details li img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+  margin-right: 0.75rem;  /* igual que .icon */
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-left: 5rem;
+}
+
+.contact__details a {
+  text-decoration: none;
+  color: #fff;
+  transition: color var(--transition);
+}
+.contact__details a:hover {
+  color: var(--color-secondary);
+}
+
+/* — Formulario (derecha, fila 1) — */
+.contact__form {
+  grid-area: form;
+  background: none;
+  box-shadow: none;
+  /* ocupa todo su hueco */
+  margin: 0;
+  padding: var(--gap);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  font-family: 'Share Tech', sans-serif;
+}
+.input-group {
+  position: relative;
+}
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 1.5rem 1rem 0.75rem;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: calc(var(--radius)*1.2);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color var(--transition);
+}
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: var(--color-secondary);
+}
+.input-group label {
+  position: absolute;
+  top: 1rem;
+  left: 0.75rem;
+  color: rgba(255,255,255,0.8);
+  font-size: 1rem;
+  pointer-events: none;
+  transition: transform var(--transition), font-size var(--transition), color var(--transition);
+}
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:focus + label,
+.input-group textarea:not(:placeholder-shown) + label {
+  transform: translateY(-1.75rem);
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+}
+.contact__btn {
+  align-self: center;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  background: linear-gradient(45deg, #1e3a8a 0%, #ec4899 100%);
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background var(--transition), transform var(--transition);
+}
+.contact__btn:hover {
+  background: linear-gradient(45deg, #ffd700 0%, #b8860b 100%);
+  color: black;
+  transform: scale(1.05);
+}
+
+/* Mensaje de agradecimiento */
+.contact__thanks {
+  text-align: center;
+  font-family: 'Share Tech', sans-serif;
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+  margin-top: var(--gap);
+}
+
+/* — Mapa y dirección (fila 2) — */
+.contact__map-container {
+  grid-area: mapcont;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+  align-items: center;      /* centra dirección/mapa en altura */
+  width: 100%;
+  max-width: 800px;
+  margin: 3rem auto;           /* centrado horizontal */
+  padding: 0 1rem;
+}
+.contact__address {
+  display: flex;
+  align-items: center;      /* centro vertical */
+  font-family: 'Share Tech', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  gap: 0.5rem;
+}
+.contact__address .icon {
+  font-size: 1.5rem;
+}
+.contact__map {
+  width: 100%;
+  height: 300px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+.contact__map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* — Responsive — */
+@media (max-width: 768px) {
+  .contact__inner {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "channels"
+      "form"
+      "mapcont";
+  }
+  .contact__form {
+    padding: 1rem;
+  }
+  .contact__map-container {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+  .contact__map {
+    height: 200px;
+  }
+}
+
+
+
+
+
+
+
 
 
 
