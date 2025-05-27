@@ -29,7 +29,7 @@
             <li><a href="#quienes-somos">Quiénes somos</a></li>
             <li><a href="#servicios">Servicios</a></li>
             <li><a href="#extras">Extras</a></li>
-            <li><a href="#galeria">Galería</a></li>
+            <!-- <li><a href="#galeria">Galería</a></li> -->
             <li><a href="#contacto">Contacto</a></li>
           </ul>
 
@@ -262,6 +262,36 @@
         <p>Pronto añadiremos imágenes de nuestras instalaciones.</p>
         aquí insertaras un grid de <img>
       </section> -->
+      <section id="galeria" class="gallery section" hidden>
+        <div class="container">
+          <h2 class="section__title">Galería</h2>
+          <div class="carousel">
+            <button class="carousel__btn prev" aria-label="Anterior">‹</button>
+            <div class="carousel__inner">
+              <!-- Ejemplo de slide: duplica y cambia src/alt cuando tengas fotos -->
+              <div class="carousel__item">
+                <img
+                  src="https://via.placeholder.com/800x450?text=Próxima+foto"
+                  alt="Placeholder 1"
+                />
+              </div>
+              <div class="carousel__item">
+                <img
+                  src="https://via.placeholder.com/800x450?text=Próxima+foto"
+                  alt="Placeholder 2"
+                />
+              </div>
+              <div class="carousel__item">
+                <img
+                  src="https://via.placeholder.com/800x450?text=Próxima+foto"
+                  alt="Placeholder 3"
+                />
+              </div>
+            </div>
+            <button class="carousel__btn next" aria-label="Siguiente">›</button>
+          </div>
+        </div>
+      </section>
 
       <!-- CONTACTO -->
       <!-- <section id="contacto" class="contact">
@@ -402,7 +432,8 @@
             </li>
             <li>
               <span class="icon">📍</span>
-              Polígono CITEC<br>Calle Vicente Traver y Tomás 9, 41120 Gelves (Sevilla)
+              Polígono CITEC<br />Calle Vicente Traver y Tomás 9, 41120 Gelves
+              (Sevilla)
             </li>
           </ul>
         </div>

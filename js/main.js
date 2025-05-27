@@ -122,4 +122,37 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// GALERIA
+document.addEventListener('DOMContentLoaded', () => {
+  // Elementos del carrusel
+  const carouselInner = document.querySelector('.carousel__inner');
+  const items         = Array.from(carouselInner.children);
+  const prevBtn       = document.querySelector('.carousel__btn.prev');
+  const nextBtn       = document.querySelector('.carousel__btn.next');
+  let index           = 0;
+
+  // Función para mover el carrusel
+  function update() {
+    carouselInner.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  // Botón “Anterior”
+  prevBtn.addEventListener('click', () => {
+    index = (index === 0) ? items.length - 1 : index - 1;
+    update();
+  });
+
+  // Botón “Siguiente”
+  nextBtn.addEventListener('click', () => {
+    index = (index === items.length - 1) ? 0 : index + 1;
+    update();
+  });
+
+  // Avance automático cada 3 segundos
+  setInterval(() => {
+    nextBtn.click();
+  }, 3000);
+});
+
+
 

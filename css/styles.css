@@ -447,6 +447,62 @@ body {
   opacity: 0.9;
 }
 
+/* 6. GALERIA */
+/* Carrusel */
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+.carousel__inner {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+.carousel__item {
+  min-width: 100%;
+  user-select: none;
+}
+.carousel__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+/* Botones */
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.carousel__btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+.carousel__btn.prev { left: 1rem; }
+.carousel__btn.next { right: 1rem; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel__btn {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.25rem;
+  }
+}
+
+
 
 /* 7. CONTACT */
 /* ─── Sección “Contacto” — CSS Completo Ajustado ─── */
