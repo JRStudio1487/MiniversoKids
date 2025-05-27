@@ -60,46 +60,38 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Back to Top button
-const backToTopBtn = document.getElementById('back-to-top');
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn   = document.getElementById('back-to-top');
+  const serviciosSec   = document.getElementById('servicios');
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    backToTopBtn.classList.add('show');
-  } else {
-    backToTopBtn.classList.remove('show');
-  }
-});
+  window.addEventListener('scroll', () => {
+    const scrollY     = window.scrollY;
+    const vh         = window.innerHeight;
+    const midpoint   = scrollY + vh / 2;
 
-backToTopBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+    // 1) Mostrar/ocultar
+    if (scrollY > 300) {
+      backToTopBtn.classList.add('show');
+    } else {
+      backToTopBtn.classList.remove('show');
+    }
 
-//
-
-// Elementos
-// const backToTopBtn = document.getElementById('back-to-top');
-const serviciosSection = document.getElementById('servicios');
-
-// Intersection Observer
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      // Cuando la sección Servicios entra en el viewport
+    // 2) Fade solo mientras el POINT-MIDDLE esté dentro de Servicios
+    const top    = serviciosSec.offsetTop;
+    const bottom = top + serviciosSec.offsetHeight;
+    if (midpoint >= top && midpoint <= bottom) {
       backToTopBtn.classList.add('fade');
     } else {
       backToTopBtn.classList.remove('fade');
     }
   });
-}, {
-  root: null,            // viewport
-  threshold: 0,          // desencadena al aparecer cualquier parte
-  rootMargin: '0px 0px -100px 0px' 
-  /* el rootMargin negativo en bottom retrasa el fade 
-     hasta que la sección esté bien dentro de la vista */
+
+  // 3) Smooth scroll
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 });
 
-// Arrancamos el observer
-observer.observe(serviciosSection);
 
 
 // Mensaje de agradecimiento tras envio mensaje contacto
