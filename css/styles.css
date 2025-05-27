@@ -448,7 +448,7 @@ body {
 }
 
 
-/* 6. CONTACT */
+/* 7. CONTACT */
 /* ─── Sección “Contacto” — CSS Completo Ajustado ─── */
 .contact {
   background: rgba(0, 0, 0, 0.7);
@@ -655,6 +655,94 @@ body {
   }
 }
 
+/* 8. FOOTER */
+.footer {
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 3rem 0 2rem;
+}
+
+/* Contenedor de columnas */
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--gap);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Títulos de columna */
+.footer__col h3 {
+  font-family: 'Starbim', sans-serif;
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+/* Contacto y enlaces */
+.footer__contact,
+.footer__links {
+  font-family: 'Share Tech', sans-serif;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__contact li,
+.footer__links li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.footer__contact .icon,
+.footer__links a {
+  margin-right: 0.5rem;
+}
+.footer__contact a,
+.footer__links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+.footer__contact a:hover,
+.footer__links a:hover {
+  color: var(--color-secondary);
+}
+
+/* Redes sociales */
+.footer__social {
+  display: flex;
+  gap: 1rem;
+}
+.footer__social .social__link img {
+  width: 2rem;
+  height: auto;
+  object-fit: contain;
+  transition: transform var(--transition);
+}
+.footer__social .social__link:hover img {
+  transform: scale(1.1);
+}
+
+/* Pie de página inferior */
+.footer__bottom {
+  font-family: 'Share Tech', sans-serif;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.875rem;
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer__social {
+    justify-content: center;
+  }
+}
 
 
 
