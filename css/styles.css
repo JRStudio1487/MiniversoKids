@@ -96,15 +96,15 @@ body {
 #back-to-top {
   position: fixed;
 
-  width: 4rem;               /* más ancho */
-  height: 4rem;              /* más alto */
-  font-size: 2rem;           /* flecha más grande */
+  width: 4rem; /* más ancho */
+  height: 4rem; /* más alto */
+  font-size: 2rem; /* flecha más grande */
   /* background: linear-gradient(45deg, #1e3a8a 0%, #ec4899 100%); color de fondo nuevo */
   background: linear-gradient(90deg, #1e3a8a, #ec4899);
-  color: #fff;               /* flecha en blanco */
-  right: 2rem;               /* separarlo un poco más del borde */
-  bottom: 2rem;              /* igual que right */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4); /* sombra más pronunciada */
+  color: #fff; /* flecha en blanco */
+  right: 2rem; /* separarlo un poco más del borde */
+  bottom: 2rem; /* igual que right */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* sombra más pronunciada */
 
   /* bottom: 1.5rem;
   right: 1.5rem;
@@ -116,7 +116,7 @@ body {
   border-radius: 50%;
   /* font-size: 1.5rem; */
   cursor: pointer;
-  display: none;               /* oculto hasta que se baje la página */
+  display: none; /* oculto hasta que se baje la página */
   align-items: center;
   justify-content: center;
   /* box-shadow: 0 2px 5px rgba(0,0,0,0.3); */
@@ -127,10 +127,10 @@ body {
   transform: scale(1.1);
 }
 #back-to-top.show {
-  display: flex;            /* sigue usando flex para centrar */
+  display: flex; /* sigue usando flex para centrar */
   align-items: center;
   justify-content: center;
-  opacity: 1;               /* sin transparencia para destacarlo */
+  opacity: 1; /* sin transparencia para destacarlo */
 }
 /* Clase que reduce la opacidad */
 #back-to-top.fade {
@@ -141,7 +141,67 @@ body {
   opacity: 1 !important;
 }
 
+/* ─── Cintas de balizar ─── */
+.cinta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 30px; /* grosor de la cinta */
+  background: repeating-linear-gradient(
+    45deg,
+    #ffeb3b 0,
+    #ffeb3b 15px,
+    #000 15px,
+    #000 30px
+  );
+  z-index: 1100; /* por encima del navbar */
+  pointer-events: none; /* que no interfiera con clicks */
 
+  /* Flex para centrar el texto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden; /* oculta el texto fuera del contenedor */
+}
+
+/* Ubicación */
+.cinta--top {
+  top: 0;
+}
+.cinta--bottom {
+  bottom: 0;
+}
+
+/* Texto dentro de la cinta */
+.cinta__text {
+  font-family: sans-serif;
+  font-size: 1.35rem;
+  font-weight: bold;
+
+  background-color: rgba(255,255,255,0.8);
+  color: red;
+  padding: 0 0.5rem;
+  border-radius: 0.25rem;
+  text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  display: inline-block;
+  /* Ajusta la velocidad cambiando la duración */
+  animation: scroll-text 20s linear infinite;
+}
+/* Keyframes para mover de derecha (100%) a izquierda (-100%) */
+@keyframes scroll-text {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 /* 1. NAVBAR */
 /* 1.1. Barra de navegación sobre fondo sólido o semitransparente */
@@ -177,7 +237,7 @@ body {
 }
 /* 1.5. Estilo de cada enlace */
 .navbar__links li a {
-  display: inline-block;                 /* imprescindible */
+  display: inline-block; /* imprescindible */
   font-family: "Starbim", sans-serif;
   font-size: 1.1rem; /* ajústalo a tu gusto */
   color: #fff; /* asegúrate buen contraste */
@@ -187,9 +247,9 @@ body {
   transition: transform 0.3s ease, color 0.3s ease; /* suaviza escala y color */
 }
 .navbar__links li a:hover {
-  transform: scale(1.2);              /* aumenta un 10% */
-  color: var(--color-secondary);      /* cambia a tu color secundario */
-  background: rgba(255,255,255,0.1);  /* opcional, ligero fondo */
+  transform: scale(1.2); /* aumenta un 10% */
+  color: var(--color-secondary); /* cambia a tu color secundario */
+  background: rgba(255, 255, 255, 0.1); /* opcional, ligero fondo */
 }
 /* 1.6. Contenedor del switcher */
 .language-switcher {
@@ -216,12 +276,12 @@ body {
   position: absolute;
   top: 100%;
   right: 0;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   list-style: none;
   padding: 0.5rem 0;
   margin: 0;
   border-radius: var(--radius);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   display: none; /* oculto por defecto */
   z-index: 1001;
 }
@@ -246,15 +306,19 @@ body {
 .hero {
   position: relative;
   height: 80vh;
-  background: url("../assets/underconstruction2.png") center/cover no-repeat fixed;
+  background: url("../assets/underconstruction2.png") center/cover no-repeat
+    fixed;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .hero__overlay {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0,0,0,0.6);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -266,12 +330,12 @@ body {
   padding: 0 1rem;
 }
 .hero__content h1 {
-  font-family: 'Starbim', sans-serif;
+  font-family: "Starbim", sans-serif;
   font-size: clamp(2rem, 6vw, 3rem);
   margin-bottom: 1rem;
 }
 .hero__content p {
-  font-family: 'Share Tech', sans-serif;
+  font-family: "Share Tech", sans-serif;
   font-size: 2rem;
   margin-bottom: 2rem;
   max-width: 600px;
@@ -335,11 +399,11 @@ body {
 
 /* ─── Sección “Quiénes somos” revisada ─── */
 #quienes-somos {
-  padding-top: 5rem;  /* espacio extra sobre el hero */
+  padding-top: 5rem; /* espacio extra sobre el hero */
 }
 
 .about__slogan {
-  font-family: 'Starbim', sans-serif;
+  font-family: "Starbim", sans-serif;
   font-size: clamp(2rem, 6vw, 3rem);
   color: var(--color-secondary);
   text-align: center;
@@ -348,7 +412,7 @@ body {
 }
 
 .about__text {
-  font-family: 'Share Tech', sans-serif;
+  font-family: "Share Tech", sans-serif;
   font-size: 1.6rem;
   max-width: 1200px;
   margin: 0 auto 3rem;
@@ -368,7 +432,7 @@ body {
   padding-bottom: 4rem;
 }
 .team__member {
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   padding: 2rem 1rem;
   border-radius: var(--radius);
   text-align: center;
@@ -379,16 +443,16 @@ body {
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 .team__member h3 {
-  font-family: 'Starbim', sans-serif;
+  font-family: "Starbim", sans-serif;
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
   color: var(--color-primary);
 }
 .team__member p {
-  font-family: 'Share Tech', sans-serif;
+  font-family: "Share Tech", sans-serif;
   font-size: 1.3em;
   line-height: 1.5;
   opacity: 0.9;
@@ -404,13 +468,13 @@ body {
 /* 4. SERVICES */
 /* 4.1. “Nuestros Servicios” */
 .services {
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   color: #fff;
   padding: 4rem 0;
 }
 .section__title {
   text-align: center;
-  font-family: 'Starbim', sans-serif;
+  font-family: "Starbim", sans-serif;
   font-size: clamp(2rem, 5vw, 2.5rem);
   color: var(--color-secondary);
   margin-bottom: 2rem;
@@ -421,8 +485,8 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 .services__card {
-  font-family: 'Share Tech', sans-serif;
-  background: rgba(255,255,255,0.1);
+  font-family: "Share Tech", sans-serif;
+  background: rgba(255, 255, 255, 0.1);
   padding: 2rem 1.5rem;
   border-radius: var(--radius);
   text-align: center;
@@ -430,7 +494,7 @@ body {
 }
 .services__card:hover {
   transform: translateY(-5px);
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
 }
 .services__icon {
   font-size: 2.8rem;
@@ -450,11 +514,11 @@ body {
 /* ─── CTA “Ver Extras” en Servicios ─── */
 .services__extra {
   text-align: center;
-  margin: 2rem 0 2rem;               /* espacio arriba y abajo */
+  margin: 2rem 0 2rem; /* espacio arriba y abajo */
 }
 
 .services__extra-text {
-  font-family: 'Share Tech', sans-serif;
+  font-family: "Share Tech", sans-serif;
   font-size: 1.5rem;
   color: #fff;
   opacity: 0.9;
@@ -464,19 +528,18 @@ body {
 
 /* Reutilizamos estilos de .contact__btn para el botón */
 .services__extra .contact__btn {
-  font-family: 'Share Tech', sans-serif;
-  margin: 0 auto;                    /* centrar */
+  font-family: "Share Tech", sans-serif;
+  margin: 0 auto; /* centrar */
   padding: 1rem 2.5rem;
   font-size: 1.3rem;
   text-decoration: none;
   transform: scale(1.25);
 }
 
-
 /* 5. EXTRAS */
 /* Botón “Volver” en Extras */
 .extras__back {
-  font-family: 'Share Tech', sans-serif;
+  font-family: "Share Tech", sans-serif;
   font-size: 1rem;
   padding: 0.75rem 1.5rem;
   background: linear-gradient(45deg, #1e3a8a 0%, #ec4899 100%);
@@ -485,7 +548,7 @@ body {
   border-radius: calc(var(--radius) * 1.5);
   cursor: pointer;
   transition: background var(--transition), transform var(--transition);
-  margin-bottom: 1.5rem;        /* separa del título */
+  margin-bottom: 1.5rem; /* separa del título */
   display: inline-block;
 }
 
@@ -498,38 +561,38 @@ body {
 
 /* Para que no quede oculto tras el navbar al hacer scroll o volver */
 html {
-  scroll-padding-top: 80px;     /* ajusta a la altura de tu navbar */
+  scroll-padding-top: 80px; /* ajusta a la altura de tu navbar */
 }
 
 /* ─── Extras ─── */
 .extras {
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   color: #fff;
   padding: 4rem 0;
 }
 .extras .section__title {
   text-align: center;
-  font-family: 'Starbim', sans-serif;
-  font-size: clamp(2rem,5vw,2.5rem);
+  font-family: "Starbim", sans-serif;
+  font-size: clamp(2rem, 5vw, 2.5rem);
   color: var(--color-secondary);
   margin-bottom: 1rem;
 }
 .extras__intro {
   text-align: center;
-  font-family: 'Share Tech', sans-serif;
+  font-family: "Share Tech", sans-serif;
   font-size: 1.25rem;
   opacity: 0.9;
   margin-bottom: 2rem;
 }
 .extras__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 2rem;
   max-width: var(--max-width);
   margin: 0 auto;
 }
 .extras__card {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   padding: 2rem 1.5rem;
   border-radius: var(--radius);
   text-align: center;
@@ -539,20 +602,20 @@ html {
 }
 .extras__card:hover {
   /* transform: translateY(-5px); */
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
 }
 .extras__icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 .extras__card h2 {
-  font-family: 'Starbim', sans-serif;
+  font-family: "Starbim", sans-serif;
   margin-bottom: 0.5rem;
   font-size: 1.25rem;
   color: var(--color-primary);
 }
 .extras__card p {
-  font-family: 'Share Tech', sans-serif;
+  font-family: "Share Tech", sans-serif;
   font-size: 0.95rem;
   line-height: 1.4;
   opacity: 0.9;
@@ -560,7 +623,7 @@ html {
 /* ─── Botones “Ver opciones” en Extras ─── */
 .extras__btn-more {
   display: inline-block;
-  font-family: 'Share Tech', sans-serif;
+  font-family: "Share Tech", sans-serif;
   font-size: 1rem;
   padding: 0.75rem 1.5rem;
   background: linear-gradient(45deg, #1e3a8a 0%, #ec4899 100%);
@@ -579,11 +642,13 @@ html {
   color: black;
 }
 
-
 /* ─── Modal de Extras ─── */
 .modal {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -594,8 +659,11 @@ html {
 }
 .modal__overlay {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.6);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
 }
 .modal__content {
   position: relative;
@@ -603,7 +671,7 @@ html {
   color: #333;
   padding: 2rem;
   border-radius: var(--radius);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   max-width: 400px;
   width: 90%;
   max-height: 80vh;
@@ -611,25 +679,24 @@ html {
 }
 .modal__close {
   position: absolute;
-  top: 0.5rem; right: 0.75rem;
+  top: 0.5rem;
+  right: 0.75rem;
   background: none;
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
 }
 .modal__content h2 {
-  font-family: 'Starbim', sans-serif;
+  font-family: "Starbim", sans-serif;
   margin-top: 0;
   color: var(--color-secondary);
 }
 .modal__content ul {
-  font-family: 'Share Tech', sans-serif;
+  font-family: "Share Tech", sans-serif;
   list-style: disc inside;
   margin-top: 1rem;
   padding-left: 1rem;
 }
-
-
 
 /* 6. GALERIA */
 /* Carrusel */
@@ -658,7 +725,7 @@ html {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   color: #fff;
   border: none;
   width: 2.5rem;
@@ -672,10 +739,14 @@ html {
   transition: background 0.2s;
 }
 .carousel__btn:hover {
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
 }
-.carousel__btn.prev { left: 1rem; }
-.carousel__btn.next { right: 1rem; }
+.carousel__btn.prev {
+  left: 1rem;
+}
+.carousel__btn.next {
+  right: 1rem;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -685,8 +756,6 @@ html {
     font-size: 1.25rem;
   }
 }
-
-
 
 /* 7. CONTACT */
 /* ─── Sección “Contacto” — CSS Completo Ajustado ─── */
@@ -699,7 +768,7 @@ html {
 /* Título centrado */
 .contact__title {
   text-align: center;
-  font-family: 'Starbim', sans-serif;
+  font-family: "Starbim", sans-serif;
   font-size: clamp(2rem, 6vw, 3rem);
   color: var(--color-secondary);
   margin-bottom: 3rem;
@@ -724,14 +793,14 @@ html {
   grid-area: channels;
 }
 .contact__details {
-  font-family: 'Share Tech', sans-serif;
+  font-family: "Share Tech", sans-serif;
   font-size: 1.3rem;
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 1rem;           /* espacio reducido */
+  gap: 1rem; /* espacio reducido */
 }
 .contact__details li {
   display: flex;
@@ -746,7 +815,7 @@ html {
   width: 5rem;
   height: 5rem;
   object-fit: contain;
-  margin-right: 0.75rem;  /* igual que .icon */
+  margin-right: 0.75rem; /* igual que .icon */
   display: flex;
   align-items: center;
   margin-top: 2rem;
@@ -773,7 +842,7 @@ html {
   display: flex;
   flex-direction: column;
   gap: var(--gap);
-  font-family: 'Share Tech', sans-serif;
+  font-family: "Share Tech", sans-serif;
 }
 .input-group {
   position: relative;
@@ -782,9 +851,9 @@ html {
 .input-group textarea {
   width: 100%;
   padding: 1.5rem 1rem 0.75rem;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.5);
-  border-radius: calc(var(--radius)*1.2);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: calc(var(--radius) * 1.2);
   color: #fff;
   font-size: 1rem;
   outline: none;
@@ -798,10 +867,11 @@ html {
   position: absolute;
   top: 1rem;
   left: 0.75rem;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 1rem;
   pointer-events: none;
-  transition: transform var(--transition), font-size var(--transition), color var(--transition);
+  transition: transform var(--transition), font-size var(--transition),
+    color var(--transition);
 }
 .input-group input:focus + label,
 .input-group input:not(:placeholder-shown) + label,
@@ -814,7 +884,7 @@ html {
 .contact__btn {
   align-self: center;
   padding: 1rem 2.5rem;
-  font-family: 'Share Tech', sans-serif;
+  font-family: "Share Tech", sans-serif;
   font-size: 1.3rem;
   background: linear-gradient(45deg, #1e3a8a 0%, #ec4899 100%);
   color: #fff;
@@ -833,7 +903,7 @@ html {
 /* Mensaje de agradecimiento */
 .contact__thanks {
   text-align: center;
-  font-family: 'Share Tech', sans-serif;
+  font-family: "Share Tech", sans-serif;
   font-size: 1.5rem;
   color: var(--color-secondary);
   margin-top: var(--gap);
@@ -845,16 +915,16 @@ html {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--gap);
-  align-items: center;      /* centra dirección/mapa en altura */
+  align-items: center; /* centra dirección/mapa en altura */
   width: 100%;
   max-width: 800px;
-  margin: 3rem auto;           /* centrado horizontal */
+  margin: 3rem auto; /* centrado horizontal */
   padding: 0 1rem;
 }
 .contact__address {
   display: flex;
-  align-items: center;      /* centro vertical */
-  font-family: 'Share Tech', sans-serif;
+  align-items: center; /* centro vertical */
+  font-family: "Share Tech", sans-serif;
   font-size: 1.5rem;
   color: #fff;
   gap: 0.5rem;
@@ -867,7 +937,7 @@ html {
   height: 300px;
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 .contact__map iframe {
   width: 100%;
@@ -915,7 +985,7 @@ html {
 
 /* Títulos de columna */
 .footer__col h3 {
-  font-family: 'Starbim', sans-serif;
+  font-family: "Starbim", sans-serif;
   font-size: 1.5rem;
   color: var(--color-secondary);
   margin-bottom: 1rem;
@@ -924,7 +994,7 @@ html {
 /* Contacto y enlaces */
 .footer__contact,
 .footer__links {
-  font-family: 'Share Tech', sans-serif;
+  font-family: "Share Tech", sans-serif;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -967,7 +1037,7 @@ html {
 
 /* Pie de página inferior */
 .footer__bottom {
-  font-family: 'Share Tech', sans-serif;
+  font-family: "Share Tech", sans-serif;
   margin-top: 2rem;
   text-align: center;
   font-size: 0.875rem;
@@ -984,15 +1054,6 @@ html {
     justify-content: center;
   }
 }
-
-
-
-
-
-
-
-
-
 
 /* z. DISPOSITIVOS MOVILES */
 /* z.1. Toggle para móvil */
