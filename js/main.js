@@ -154,5 +154,66 @@ document.addEventListener('DOMContentLoaded', () => {
   }, 3000);
 });
 
+// ABRIR Y CERRAR MODAL EXTRAS
+document.addEventListener('DOMContentLoaded', () => {
+  // Definimos las opciones de cada extra
+  const extrasData = {
+    decoracion: [
+      'Globos',
+      'Guirnaldas temáticas',
+      'Photocall',
+      'Vinilos decorativos',
+      'Cartelería'
+    ],
+    animacion: [
+      'Payasos profesionales',
+      'Magos infantiles',
+      'Pintacaras',
+      'Show de burbujas',
+      'Minidisco'
+    ],
+    sonido: [
+      'Altavoces PA básicos',
+      'Luces LED dinámicas',
+      'Microfonía inalámbrica'
+    ],
+    pasteleria: [
+      'Tartas personalizadas',
+      'Cupcakes temáticos',
+      'Mesas dulces',
+      'Galletas decoradas'
+    ],
+    bebidas: [
+      'Refrescos surtidos',
+      'Zumos naturales',
+      'Bebidas alcohólicas (* Sólo para adultos)',
+      'Agua mineral',
+      'Hielo y vasos'
+    ]
+  };
+
+  const modal      = document.getElementById('extras-modal');
+  const titleEl    = document.getElementById('modal-title');
+  const listEl     = document.getElementById('modal-list');
+  const closeBtn   = modal.querySelector('.modal__close');
+  const overlay    = modal.querySelector('.modal__overlay');
+
+  // Abrir modal al clickar cada “Ver opciones”
+  document.querySelectorAll('.extras__btn-more').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const key = btn.closest('.extras__card').dataset.extra;
+      // Poblar título y lista
+      titleEl.textContent = btn.closest('.extras__card').querySelector('h2').textContent;
+      listEl.innerHTML    = extrasData[key].map(item => `<li>${item}</li>`).join('');
+      modal.classList.remove('hidden');
+    });
+  });
+
+  // Cerrar modal
+  [closeBtn, overlay].forEach(el =>
+    el.addEventListener('click', () => modal.classList.add('hidden'))
+  );
+});
+
 
 

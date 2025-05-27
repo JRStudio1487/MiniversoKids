@@ -447,6 +447,190 @@ body {
   opacity: 0.9;
 }
 
+/* ─── CTA “Ver Extras” en Servicios ─── */
+.services__extra {
+  text-align: center;
+  margin: 2rem 0 2rem;               /* espacio arriba y abajo */
+}
+
+.services__extra-text {
+  font-family: 'Share Tech', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  opacity: 0.9;
+  margin: 4rem auto;
+  max-width: 600px;
+}
+
+/* Reutilizamos estilos de .contact__btn para el botón */
+.services__extra .contact__btn {
+  font-family: 'Share Tech', sans-serif;
+  margin: 0 auto;                    /* centrar */
+  padding: 1rem 2.5rem;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transform: scale(1.25);
+}
+
+
+/* 5. EXTRAS */
+/* Botón “Volver” en Extras */
+.extras__back {
+  font-family: 'Share Tech', sans-serif;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(45deg, #1e3a8a 0%, #ec4899 100%);
+  color: #fff;
+  border: none;
+  border-radius: calc(var(--radius) * 1.5);
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+  margin-bottom: 1.5rem;        /* separa del título */
+  display: inline-block;
+}
+
+/* Hover igual que el resto */
+.extras__back:hover {
+  background: linear-gradient(45deg, #ffd700 0%, #b8860b 100%);
+  transform: translateY(-2px);
+  color: black;
+}
+
+/* Para que no quede oculto tras el navbar al hacer scroll o volver */
+html {
+  scroll-padding-top: 80px;     /* ajusta a la altura de tu navbar */
+}
+
+/* ─── Extras ─── */
+.extras {
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  padding: 4rem 0;
+}
+.extras .section__title {
+  text-align: center;
+  font-family: 'Starbim', sans-serif;
+  font-size: clamp(2rem,5vw,2.5rem);
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+.extras__intro {
+  text-align: center;
+  font-family: 'Share Tech', sans-serif;
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+.extras__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.extras__card {
+  background: rgba(255,255,255,0.1);
+  padding: 2rem 1.5rem;
+  border-radius: var(--radius);
+  text-align: center;
+  transition: transform var(--transition), background var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+.extras__card:hover {
+  /* transform: translateY(-5px); */
+  background: rgba(255,255,255,0.2);
+}
+.extras__icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.extras__card h2 {
+  font-family: 'Starbim', sans-serif;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: var(--color-primary);
+}
+.extras__card p {
+  font-family: 'Share Tech', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+/* ─── Botones “Ver opciones” en Extras ─── */
+.extras__btn-more {
+  display: inline-block;
+  font-family: 'Share Tech', sans-serif;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(45deg, #1e3a8a 0%, #ec4899 100%);
+  color: #fff;
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+  margin-top: auto;
+  text-align: center;
+}
+
+.extras__btn-more:hover {
+  background: linear-gradient(45deg, #ffd700 0%, #b8860b 100%);
+  transform: translateY(-2px);
+  color: black;
+}
+
+
+/* ─── Modal de Extras ─── */
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.modal.hidden {
+  display: none;
+}
+.modal__overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+}
+.modal__content {
+  position: relative;
+  background: #fff;
+  color: #333;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  max-width: 400px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.modal__close {
+  position: absolute;
+  top: 0.5rem; right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.modal__content h2 {
+  font-family: 'Starbim', sans-serif;
+  margin-top: 0;
+  color: var(--color-secondary);
+}
+.modal__content ul {
+  font-family: 'Share Tech', sans-serif;
+  list-style: disc inside;
+  margin-top: 1rem;
+  padding-left: 1rem;
+}
+
+
+
 /* 6. GALERIA */
 /* Carrusel */
 .carousel {
@@ -630,7 +814,8 @@ body {
 .contact__btn {
   align-self: center;
   padding: 1rem 2.5rem;
-  font-size: 1.2rem;
+  font-family: 'Share Tech', sans-serif;
+  font-size: 1.3rem;
   background: linear-gradient(45deg, #1e3a8a 0%, #ec4899 100%);
   color: #fff;
   border: none;
