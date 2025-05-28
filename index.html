@@ -349,50 +349,56 @@
             <!-- 2. Formulario -->
             <form
               class="contact__form"
-              action="https://formspree.io/f/YOUR_FORM_ID"
+              action="https://formspree.io/f/xgvkgybj"
               method="POST"
             >
-              <input type="hidden" name="_replyto" value="email" />
-              <input
-                type="hidden"
-                name="_subject"
-                value="Nuevo mensaje desde Miniverso Kids"
-              />
               <div class="input-group">
                 <input
-                  id="nombre"
+                  type="text"
                   name="nombre"
+                  id="nombre"
                   required
                   placeholder=" "
-                /><label for="nombre">Tu nombre</label>
+                />
+                <label for="nombre">Tu nombre</label>
               </div>
               <div class="input-group">
-                <input id="email" name="email" required placeholder=" " /><label
-                  for="email"
-                  >Tu email</label
-                >
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  placeholder=" "
+                />
+                <label for="email">Tu email</label>
               </div>
               <div class="input-group">
-                <input id="phone" name="phone" required placeholder=" " /><label
-                  for="phone"
-                  >Tu teléfono</label
-                >
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  required
+                  placeholder=" "
+                />
+                <label for="phone">Tu teléfono</label>
               </div>
               <div class="input-group">
                 <textarea
-                  id="mensaje"
                   name="mensaje"
+                  id="mensaje"
                   rows="4"
                   required
                   placeholder=" "
                 ></textarea>
                 <label for="mensaje">Tu mensaje</label>
               </div>
-              <button type="submit" class="btn contact__btn">Enviar</button>
+              <button type="submit" class="btn contact__btn">
+                Enviar mensaje
+              </button>
             </form>
 
             <!-- Mensaje de agradecimiento oculto -->
-            <div
+            <!-- <div
               id="contact-thanks"
               class="contact__thanks"
               style="display: none"
@@ -401,7 +407,7 @@
                 ¡Gracias por contactar! Atenderemos su solicitud a la mayor
                 brevedad posible.
               </p>
-            </div>
+            </div> -->
 
             <!-- 3. Dirección + Mapa a todo ancho -->
             <div class="contact__map-container">
@@ -435,7 +441,7 @@
             </li>
             <li>
               <span class="icon">✉️</span>
-              <a href="mailto:info@minivesokids.es">info@minivesokids.com</a>
+              <a href="mailto:info@minivesokids.com">info@minivesokids.com</a>
             </li>
             <li>
               <span class="icon">📍</span>

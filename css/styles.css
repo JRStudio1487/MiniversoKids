@@ -545,7 +545,7 @@ body {
   background: linear-gradient(45deg, #1e3a8a 0%, #ec4899 100%);
   color: #fff;
   border: none;
-  border-radius: calc(var(--radius) * 1.5);
+  border-radius: 1.5rem;
   cursor: pointer;
   transition: background var(--transition), transform var(--transition);
   margin-bottom: 1.5rem; /* separa del título */
@@ -889,7 +889,7 @@ html {
   background: linear-gradient(45deg, #1e3a8a 0%, #ec4899 100%);
   color: #fff;
   border: none;
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   cursor: pointer;
   margin-top: 1rem;
   transition: background var(--transition), transform var(--transition);
