@@ -425,7 +425,7 @@ body {
 }
 
 /* Contenedor del equipo */
-.team__container {
+/* .team__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
@@ -456,7 +456,79 @@ body {
   font-size: 1.3em;
   line-height: 1.5;
   opacity: 0.9;
+} */
+
+
+
+/* ─── Equipo Miniverso (About Us) ─── */
+.team__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
+
+.team__member {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform var(--transition), background var(--transition);
+}
+
+/* .team__member:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+} */
+
+.team__avatar {
+  width: 180px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  /* Centrar horizontal y bajar verticalmente al 60% */
+  object-position: 25% 25%;
+  margin-bottom: 1rem;
+  border: 3px solid;
+  border-color: #999B9B;
+}
+
+.team__name {
+  font-family: 'Share Tech', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+  color: #fff;
+}
+
+.team__role {
+  font-family: 'Starbim', sans-serif;
+  font-size: 1.6rem;
+  /* opacity: 0.8; */
+  margin-bottom: 0.75rem;
+  color: #fff;
+}
+
+.team__slogan {
+  font-family: 'Share Tech', sans-serif;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.team__bio {
+  font-family: 'Share Tech', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  /* opacity: 0.9; */
+  color: #fff;
+  width: 80%;
+}
+
 
 /* Responsive: apilar en móvil */
 @media (max-width: 768px) {
