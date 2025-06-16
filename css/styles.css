@@ -179,7 +179,7 @@ body {
   font-size: 1.35rem;
   font-weight: bold;
 
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   color: red;
   padding: 0 0.5rem;
   border-radius: 0.25rem;
@@ -299,6 +299,20 @@ body {
 }
 .language-switcher__option:hover img {
   transform: scale(1.1);
+}
+/* 1.7. Logo en el Navbar */
+.navbar__logo {
+  display: block; /* elimina espacio indeseado debajo de la imagen */
+  height: 100px; /* altura fija adecuada para el navbar */
+  width: auto; /* ancho proporcional */
+  max-height: 100%; /* para no salirse si cambias el navbar */
+  margin-right: var(--gap); /* separa el logo del resto de enlaces */
+}
+/* Ajuste para móvil */
+@media (max-width: 768px) {
+  .navbar__logo {
+    height: 40px; /* un poco más pequeño en pantallas estrechas */
+  }
 }
 
 /* 2. HERO */
@@ -458,8 +472,6 @@ body {
   opacity: 0.9;
 } */
 
-
-
 /* ─── Equipo Miniverso (About Us) ─── */
 .team__container {
   max-width: var(--max-width);
@@ -487,26 +499,26 @@ body {
 } */
 
 .team__avatar {
-  width: 180px;
+  width: 200px;
   height: auto;
-  border-radius: 50%;
+  border-radius: 20%;
   object-fit: cover;
   /* Centrar horizontal y bajar verticalmente al 60% */
   object-position: 25% 25%;
   margin-bottom: 1rem;
   border: 3px solid;
-  border-color: #999B9B;
+  border-color: #999b9b;
 }
 
 .team__name {
-  font-family: 'Share Tech', sans-serif;
+  font-family: "Share Tech", sans-serif;
   font-size: 2rem;
   margin-bottom: 0.25rem;
   color: #fff;
 }
 
 .team__role {
-  font-family: 'Starbim', sans-serif;
+  font-family: "Starbim", sans-serif;
   font-size: 1.6rem;
   /* opacity: 0.8; */
   margin-bottom: 0.75rem;
@@ -514,21 +526,20 @@ body {
 }
 
 .team__slogan {
-  font-family: 'Share Tech', sans-serif;
+  font-family: "Share Tech", sans-serif;
   font-size: 1.2rem;
   color: var(--color-primary);
   margin-bottom: 0.5rem;
 }
 
 .team__bio {
-  font-family: 'Share Tech', sans-serif;
+  font-family: "Share Tech", sans-serif;
   font-size: 1.2rem;
   line-height: 1.5;
   /* opacity: 0.9; */
   color: #fff;
   width: 80%;
 }
-
 
 /* Responsive: apilar en móvil */
 @media (max-width: 768px) {

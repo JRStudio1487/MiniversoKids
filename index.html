@@ -24,7 +24,21 @@
       <nav class="navbar">
         <div class="container navbar__container">
           <!-- Logo -->
-          <div class="navbar__logo">Miniverso Kids</div>
+          <a href="index.html" class="navbar__brand">
+            <picture>
+              <!-- Logo móvil cuando el viewport sea ≤768px -->
+              <source
+                srcset="assets/logo_red.png"
+                media="(max-width: 768px)"
+              />
+              <!-- Logo de escritorio por defecto -->
+              <img
+                src="assets/logo_red2.png"
+                alt="Miniverso Kids"
+                class="navbar__logo"
+              />
+            </picture>
+          </a>
 
           <!-- Espaciador flexible para empujar el resto a la derecha -->
           <div class="navbar__spacer"></div>
@@ -165,15 +179,21 @@
 
         <!-- Miniverso Team -->
         <div class="container team__container">
-          <!-- Perfil Rosa -->
+          <!-- Perfil Executive Team -->
           <div class="team__member" data-aos="fade-up">
-            <img src="assets/rosa.png" alt="Rosa Maya" class="team__avatar" />
-            <h3 class="team__name">Rosa Maya</h3>
-            <p class="team__slogan">«La imaginación es nuestra mayor aventura»</p>
-            <p class="team__role">Fundadora & Gestora</p>
+            <img
+              src="assets/executive.png"
+              alt="Executive Team"
+              class="team__avatar"
+            />
+            <!-- <h3 class="team__name">Equipo Ejecutivo</h3> -->
+            <p class="team__slogan">
+              «La imaginación es nuestra mayor aventura»
+            </p>
+            <p class="team__role">Equipo Ejecutivo</p>
             <p class="team__bio">
-              Apasionada de las celebraciones infantiles, Rosa diseña cada
-              detalle para que toda la familia viva momentos inolvidables. Coordina
+              Apasionados de las celebraciones infantiles, diseñamos cada
+              detalle para que toda la familia viva momentos inolvidables.<br />Coordinamos
               reservas, decoraciones y servicios de animación con cariño y
               dedicación.
             </p>
@@ -182,18 +202,18 @@
           <!-- Perfil Juanma -->
           <div class="team__member" data-aos="fade-up" data-aos-delay="100">
             <img
-              src="assets/juanma2.png"
-              alt="Juanma Ramirez"
+              src="assets/technical2.png"
+              alt="Technical Team"
               class="team__avatar"
             />
-            <h3 class="team__name">Juanma Ramírez</h3>
+            <!-- <h3 class="team__name">Equipo Técnico</h3> -->
             <p class="team__slogan">«Conectando diversión y tecnología»</p>
-            <p class="team__role">Responsable Técnico & Community Manager</p>
+            <p class="team__role">Equipo Técnico</p>
             <p class="team__bio">
-              Tras bambalinas, Juanma mantiene nuestra web y redes sociales
-              siempre al día. Aplica su experiencia en informática y community
-              management para que encuentres fácilmente lo que necesitas y
-              estés al tanto de todas las novedades.
+              Tras bambalinas, nuestro equipo técnico mantiene nuestra web y
+              redes sociales siempre al día. Aplicamos nuestra experiencia en
+              informática y community management para que encuentres fácilmente
+              lo que necesitas y estés al tanto de todas las novedades.
             </p>
           </div>
         </div>
@@ -454,8 +474,8 @@
             </li>
             <li>
               <span class="icon">📍</span>
-              Parque Tecnológico CITEC<br />Calle Vicente Traver y Tomás 9, 41120 Gelves
-              (Sevilla)
+              Parque Tecnológico CITEC<br />Calle Vicente Traver y Tomás 9,
+              41120 Gelves (Sevilla)
             </li>
           </ul>
         </div>
