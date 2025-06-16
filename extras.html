@@ -24,7 +24,21 @@
       <nav class="navbar">
         <div class="container navbar__container">
           <!-- Logo -->
-          <div class="navbar__logo">Miniverso Kids</div>
+          <a href="index.html" class="navbar__brand">
+            <picture>
+              <!-- Logo móvil cuando el viewport sea ≤768px -->
+              <source
+                srcset="assets/logo_red.png"
+                media="(max-width: 768px)"
+              />
+              <!-- Logo de escritorio por defecto -->
+              <img
+                src="assets/logo_red2.png"
+                alt="Miniverso Kids"
+                class="navbar__logo"
+              />
+            </picture>
+          </a>
 
           <!-- Espaciador flexible para empujar el resto a la derecha -->
           <div class="navbar__spacer"></div>
