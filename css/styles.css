@@ -80,11 +80,29 @@
   font-style: normal;
   font-display: swap;
 }
+/* SupersonicRocketship Font */
+@font-face {
+  font-family: "SupersonicRocketship";
+  src: url("../assets/fonts/SupersonicRocketship.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* GameBubble Font */
+@font-face {
+  font-family: "GameBubble";
+  src: url("../assets/fonts/GameBubble.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 /* Variables de tipografía */
 :root {
   --font-primary: "Share Tech", sans-serif;
   /* --font-fun: "Bubbler One", cursive; */
-  --font-logo: "Starbim", var(--font-fun);
+  --font-logo: "GameBubble", var(--font-fun);
 }
 /* Fondo global con imagen */
 body {
@@ -238,13 +256,14 @@ body {
 /* 1.5. Estilo de cada enlace */
 .navbar__links li a {
   display: inline-block; /* imprescindible */
-  font-family: "Starbim", sans-serif;
+  font-family: "GameBubble", sans-serif;
   font-size: 1.1rem; /* ajústalo a tu gusto */
   color: #fff; /* asegúrate buen contraste */
   text-decoration: none; /* quita subrayado */
   padding: 0.5rem 0.75rem;
   border-radius: var(--radius);
   transition: transform 0.3s ease, color 0.3s ease; /* suaviza escala y color */
+  text-transform: uppercase;
 }
 .navbar__links li a:hover {
   transform: scale(1.2); /* aumenta un 10% */
@@ -344,9 +363,10 @@ body {
   padding: 0 1rem;
 }
 .hero__content h1 {
-  font-family: "Starbim", sans-serif;
+  font-family: "GameBubble", sans-serif;
   font-size: clamp(2rem, 6vw, 3rem);
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 .hero__content p {
   font-family: "Share Tech", sans-serif;
@@ -417,12 +437,13 @@ body {
 }
 
 .about__slogan {
-  font-family: "Starbim", sans-serif;
+  font-family: "GameBubble", sans-serif;
   font-size: clamp(2rem, 6vw, 3rem);
   color: var(--color-secondary);
   text-align: center;
   margin: 4rem auto 3rem;
   padding: 0 1rem;
+  text-transform: uppercase;
 }
 
 .about__text {
@@ -518,11 +539,12 @@ body {
 }
 
 .team__role {
-  font-family: "Starbim", sans-serif;
+  font-family: "GameBubble", sans-serif;
   font-size: 1.6rem;
   /* opacity: 0.8; */
   margin-bottom: 0.75rem;
   color: #fff;
+  text-transform: uppercase;
 }
 
 .team__slogan {
@@ -557,10 +579,11 @@ body {
 }
 .section__title {
   text-align: center;
-  font-family: "Starbim", sans-serif;
+  font-family: "GameBubble", sans-serif;
   font-size: clamp(2rem, 5vw, 2.5rem);
   color: var(--color-secondary);
   margin-bottom: 2rem;
+  text-transform: uppercase;
 }
 .services__container {
   display: grid;
@@ -655,10 +678,11 @@ html {
 }
 .extras .section__title {
   text-align: center;
-  font-family: "Starbim", sans-serif;
+  font-family: "GameBubble", sans-serif;
   font-size: clamp(2rem, 5vw, 2.5rem);
   color: var(--color-secondary);
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 .extras__intro {
   text-align: center;
@@ -692,10 +716,11 @@ html {
   margin-bottom: 1rem;
 }
 .extras__card h2 {
-  font-family: "Starbim", sans-serif;
+  font-family: "GameBubble", sans-serif;
   margin-bottom: 0.5rem;
   font-size: 1.25rem;
   color: var(--color-primary);
+  text-transform: uppercase;
 }
 .extras__card p {
   font-family: "Share Tech", sans-serif;
@@ -770,9 +795,10 @@ html {
   cursor: pointer;
 }
 .modal__content h2 {
-  font-family: "Starbim", sans-serif;
+  font-family: "GameBubble", sans-serif;
   margin-top: 0;
   color: var(--color-secondary);
+  text-transform: uppercase;
 }
 .modal__content ul {
   font-family: "Share Tech", sans-serif;
@@ -851,10 +877,11 @@ html {
 /* Título centrado */
 .contact__title {
   text-align: center;
-  font-family: "Starbim", sans-serif;
+  font-family: "GameBubble", sans-serif;
   font-size: clamp(2rem, 6vw, 3rem);
   color: var(--color-secondary);
   margin-bottom: 3rem;
+  text-transform: uppercase;
 }
 
 /* Contenedor principal: dos columnas + una fila para el mapa */
@@ -1068,10 +1095,11 @@ html {
 
 /* Títulos de columna */
 .footer__col h3 {
-  font-family: "Starbim", sans-serif;
+  font-family: "GameBubble", sans-serif;
   font-size: 1.5rem;
   color: var(--color-secondary);
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 /* Contacto y enlaces */
