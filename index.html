@@ -14,11 +14,11 @@
   </head>
   <body>
     <!-- Cinta superior -->
-    <div class="cinta cinta--top">
+    <!-- <div class="cinta cinta--top">
       <span class="cinta__text">
         PÁGINA WEB EN CONSTRUCCIÓN. PRONTO ESTAREMOS A SU DISPOSICIÓN
       </span>
-    </div>
+    </div> -->
     <!-- HEADER + NAVBAR -->
     <header>
       <nav class="navbar">
@@ -28,12 +28,12 @@
             <picture>
               <!-- Logo móvil cuando el viewport sea ≤768px -->
               <source
-                srcset="assets/logo_red.png"
+                srcset="assets/logo_2025.png"
                 media="(max-width: 768px)"
               />
               <!-- Logo de escritorio por defecto -->
               <img
-                src="assets/logo_red2.png"
+                src="assets/logo_2025.png"
                 alt="Miniverso Kids"
                 class="navbar__logo"
               />
@@ -67,7 +67,7 @@
               <li class="language-switcher__option" data-lang="es">
                 <img src="assets/es.png" alt="ES" width="24" />
               </li>
-              <li class="language-switcher__option" data-lang="us">
+              <!-- <li class="language-switcher__option" data-lang="us">
                 <img src="assets/us.png" alt="US" width="24" />
               </li>
               <li class="language-switcher__option" data-lang="fr">
@@ -75,7 +75,7 @@
               </li>
               <li class="language-switcher__option" data-lang="it">
                 <img src="assets/it.png" alt="IT" width="24" />
-              </li>
+              </li> -->
             </ul>
           </div>
 
@@ -88,11 +88,12 @@
     <!-- CONTENIDO PRINCIPAL -->
     <main>
       <!-- HERO -->
-      <!-- <section id="hero" class="hero">
+      <!-- <section id="home" class="hero">
         placeholder para imagen de portada
-        <div class="hero__content">
-          <h1>Bienvenidos a Miniveso Kids</h1>
-          <p>El mejor salón de celebraciones infantiles en Gelves (Sevilla).</p>
+        <div class="hero__overlay">
+        <div class="hero__content container">
+          <h1>Bienvenidos a Miniverso Kids</h1>
+          <p>El mejor salón de celebraciones de Gelves</p>
         </div>
       </section> -->
       <section id="home" class="hero">
@@ -103,53 +104,12 @@
               Nuestro sitio web está en construcción. Muy pronto podrás
               descubrir un mundo de diversión para tus celebraciones infantiles
             </p>
-            <a href="#contacto" class="btn">Contáctanos</a>
+            <!-- <a href="#contacto" class="contact__btn">Contáctanos</a> -->
           </div>
         </div>
       </section>
 
       <!-- QUIÉNES SOMOS -->
-
-      <!-- <section id="quienes-somos" class="about">
-        <h2>Quiénes somos</h2>
-        <p>
-          En Miniveso Kids disponemos de un parque de bolas con toboganes y
-          colchonetas, zona infantil y zona para adultos con barra de bar, mesas
-          y baños perfectamente equipados.
-        </p>
-      </section> -->
-      <!-- <section id="quienes-somos" class="about section">
-        <div class="container about__container">
-          Imagen de presentación
-          <div class="about__image">
-            <img
-              src="https://via.placeholder.com/600x400?text=Miniverso+Kids"
-              alt="Miniverso Kids"
-            />
-          </div>
-          Texto descriptivo
-          <div class="about__content">
-            <h2>Quiénes somos</h2>
-            <p>
-              En Miniverso Kids somos especialistas en celebraciones infantiles.
-              Nuestro espacio cuenta con parque de bolas, toboganes y
-              colchonetas, además de una zona exclusiva para adultos con barra
-              de bar y cómodos asientos.
-            </p>
-            <p>
-              Estamos en Gelves (Sevilla) y nos podemos encargar de todos los
-              detalles que necesites para que vuestra celebración sea única: 
-              decoración personalizada, animadores, pintacaras y mucho más.
-            </p>
-            Under Construction
-            <p>
-              Muy pronto podrás consultar nuestro calendario de eventos y
-              reservar tu fecha favorita.
-            </p>
-          </div>
-        </div>
-      </section> -->
-
       <section id="quienes-somos" class="about section">
         <div class="container">
           <!-- Slogan a toda página -->
@@ -199,7 +159,7 @@
             </p>
           </div>
 
-          <!-- Perfil Juanma -->
+          <!-- Perfil TI -->
           <div class="team__member" data-aos="fade-up" data-aos-delay="100">
             <img
               src="assets/technical2.png"
@@ -220,15 +180,6 @@
       </section>
 
       <!-- SERVICIOS PRINCIPALES -->
-      <!-- <section id="servicios" class="services">
-        <h2>Servicios</h2>
-        <ul class="services__list">
-          <li>Alquiler de salón para cumpleaños y comuniones</li>
-          <li>Parque de bolas, toboganes y colchonetas</li>
-          <li>Zona exclusiva para adultos con barra de bar</li>
-          <li>Acceso a baños y servicios</li>
-        </ul>
-      </section> -->
       <section id="servicios" class="services section">
         <div class="container">
           <p class="section__title">Nuestros Servicios</p>
@@ -293,11 +244,6 @@
       <!-- En otro .html -->
 
       <!-- GALERÍA (placeholder) -->
-      <!-- <section id="galeria" class="gallery">
-        <h2>Galería</h2>
-        <p>Pronto añadiremos imágenes de nuestras instalaciones.</p>
-        aquí insertaras un grid de <img>
-      </section> -->
       <section id="galeria" class="gallery section" hidden>
         <div class="container">
           <p class="section__title">Galería</p>
@@ -330,21 +276,6 @@
       </section>
 
       <!-- CONTACTO -->
-      <!-- <section id="contacto" class="contact">
-        <h2>Contacto</h2>
-        <form class="contact__form">
-          <label for="nombre">Nombre</label>
-          <input type="text" id="nombre" name="nombre" required />
-
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" name="mensaje"></textarea>
-
-          <button type="submit">Enviar</button>
-        </form>
-      </section> -->
       <section id="contacto" class="contact section">
         <div class="container">
           <p class="contact__title">¡ Hablemos !</p>
@@ -354,18 +285,18 @@
               <ul class="contact__details">
                 <li>
                   <span class="icon">📞</span
-                  ><a href="tel:600123456">600 123 456</a>
+                  ><a href="tel:624066234">+34 624 066 234</a>
                 </li>
                 <li>
                   <span class="icon">✉️</span
-                  ><a href="mailto:info@minivesokids.es"
-                    >info@minivesokids.com</a
+                  ><a href="mailto:info@miniversokids.es"
+                    >info@miniversokids.com</a
                   >
                 </li>
                 <li>
                   <span class="icon"></span
                   ><a
-                    href="https://wa.me/34600123456"
+                    href="https://wa.me/34624066234"
                     target="_blank"
                     rel="noopener"
                     ><img class="whatsapp" src="./assets/whatsapp.png" alt="" />
@@ -441,7 +372,7 @@
             <!-- 3. Dirección + Mapa a todo ancho -->
             <div class="contact__map-container">
               <p class="contact__address">
-                <span class="icon">📍</span>Polígono CITEC<br />Vicente Traver y
+                <span class="icon">📍</span>Parque Tecnológico CITEC<br />Calle Vicente Traver y
                 Tomás 9<br />41120 Gelves (Sevilla)
               </p>
               <div class="contact__map">
@@ -466,7 +397,7 @@
           <ul class="footer__contact">
             <li>
               <span class="icon">📞</span>
-              <a href="tel:600123456">600 123 456</a>
+              <a href="tel:600123456">624 066 234</a>
             </li>
             <li>
               <span class="icon">✉️</span>
@@ -485,7 +416,7 @@
           <h3>Síguenos en Redes</h3>
           <div class="footer__social">
             <a
-              href="https://wa.me/34600123456"
+              href="https://wa.me/34624066234"
               class="social__link"
               aria-label="WhatsApp"
               target="_blank"
@@ -503,7 +434,7 @@
               <img src="assets/facebook.png" alt="Facebook" />
             </a>
             <a
-              href="https://www.instagram.com/tu_usuario"
+              href="https://www.instagram.com/miniversokidsadventures/"
               class="social__link"
               aria-label="Instagram"
               target="_blank"
@@ -512,7 +443,7 @@
               <img src="assets/instagram.png" alt="Instagram" />
             </a>
             <a
-              href="https://www.tiktok.com/@tu_usuario"
+              href="https://www.tiktok.com/@miniversokids"
               class="social__link"
               aria-label="TikTok"
               target="_blank"
