@@ -160,10 +160,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const extrasData = {
     decoracion: [
       'Globos',
+      'Arcos',
       'Guirnaldas temáticas',
       'Photocall',
       'Vinilos decorativos',
       'Cartelería'
+    ],
+    carrito: [
+      'Decoración personalizada',
+      'Donuts',
+      'Galletas',
+      'Chuches'
     ],
     animacion: [
       'Payasos profesionales',
@@ -185,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ],
     bebidas: [
       'Refrescos surtidos',
-      'Zumos naturales',
+      'Zumos',
       'Bebidas alcohólicas (* Sólo para adultos)',
       'Agua mineral',
       'Hielo y vasos'

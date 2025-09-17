@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Extras - Miniveso Kids</title>
+    <title>Miniveso Kids</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,11 +14,11 @@
   </head>
   <body>
     <!-- Cinta superior -->
-    <div class="cinta cinta--top">
+    <!-- <div class="cinta cinta--top">
       <span class="cinta__text">
         PÁGINA WEB EN CONSTRUCCIÓN. PRONTO ESTAREMOS A SU DISPOSICIÓN
       </span>
-    </div>
+    </div> -->
     <!-- HEADER + NAVBAR -->
     <header>
       <nav class="navbar">
@@ -28,12 +28,12 @@
             <picture>
               <!-- Logo móvil cuando el viewport sea ≤768px -->
               <source
-                srcset="assets/logo_red.png"
+                srcset="assets/logo_mob_2025.png"
                 media="(max-width: 768px)"
               />
               <!-- Logo de escritorio por defecto -->
               <img
-                src="assets/logo_red2.png"
+                src="assets/logo_2025.png"
                 alt="Miniverso Kids"
                 class="navbar__logo"
               />
@@ -67,7 +67,7 @@
               <li class="language-switcher__option" data-lang="es">
                 <img src="assets/es.png" alt="ES" width="24" />
               </li>
-              <li class="language-switcher__option" data-lang="us">
+              <!-- <li class="language-switcher__option" data-lang="us">
                 <img src="assets/us.png" alt="US" width="24" />
               </li>
               <li class="language-switcher__option" data-lang="fr">
@@ -75,7 +75,7 @@
               </li>
               <li class="language-switcher__option" data-lang="it">
                 <img src="assets/it.png" alt="IT" width="24" />
-              </li>
+              </li> -->
             </ul>
           </div>
 
@@ -103,45 +103,70 @@
           <div class="extras__grid">
             <!-- Decoración -->
             <article class="extras__card" data-extra="decoracion">
-              <div class="extras__icon">🎨</div>
+              <div class="extras__icon">🎈 🎨 🎀</div>
               <h2>Decoración Temática</h2>
               <p>
-                Globos, guirnaldas y photocall para la temática que prefieras.
+                Creamos ambientes mágicos adaptados a tu temática favorita.
               </p>
               <button class="extras__btn-more">Ver opciones</button>
             </article>
+            <!-- Carrito -->
+            <article class="extras__card" data-extra="carrito">
+              <div class="extras__icon">🍩 🍭 🍬</div>
+              <h2>Carrito de chuches</h2>
+              <p>Pasteles y dulces tematizados.</p>
+              <button class="extras__btn-more">Ver opciones</button>
+            </article>
             <!-- Animación -->
-            <article class="extras__card" data-extra="animacion">
+            <!-- <article class="extras__card" data-extra="animacion">
               <div class="extras__icon">🤡</div>
               <h2>Animación Infantil</h2>
               <p>Pintacaras, magos y payasos.</p>
               <button class="extras__btn-more">Ver opciones</button>
-            </article>
+            </article> -->
             <!-- Sonido y Luces -->
-            <article class="extras__card" data-extra="sonido">
+            <!-- <article class="extras__card" data-extra="sonido">
               <div class="extras__icon">🔊</div>
               <h2>Sonido & Luces</h2>
               <p>Equipo de sonido y luces básicas para animar la fiesta.</p>
               <button class="extras__btn-more">Ver opciones</button>
-            </article>
+            </article> -->
             <!-- Pastelería -->
-            <article class="extras__card" data-extra="pasteleria">
+            <!-- <article class="extras__card" data-extra="pasteleria">
               <div class="extras__icon">🍰</div>
               <h2>Pastelería</h2>
               <p>Pasteles y dulces tematizados.</p>
               <button class="extras__btn-more">Ver opciones</button>
-            </article>
+            </article> -->
             <!-- Bebidas Frías -->
             <article class="extras__card" data-extra="bebidas">
-              <div class="extras__icon">🥤</div>
+              <div class="extras__icon">🥤 🧃 🍻</div>
               <h2>Bebidas Frías</h2>
               <p>
-                Selección de refrescos y zumos siempre a la temperatura
+                Selección de todo tipo de bebidas siempre a la temperatura
                 perfecta.
               </p>
               <button class="extras__btn-more">Ver opciones</button>
             </article>
+            <!-- Proximas opciones -->
+            <article class="extras__card" data-extra="otras">
+              <div class="extras__icon">⚙️ 🧩 ❓</div>
+              <h2>Otros servicios</h2>
+              <p>
+                Pronto ampliaremos la oferta y selección de añadidos.<br>
+                También admitimos sugerencias.
+              </p>
+              <!-- <button class="extras__btn-more">Ver opciones</button> -->
+            </article>
           </div>
+        </div>
+
+        <div class="services__extra">
+          <p class="services__extra-text">
+            Toda la oferta de <strong>servicios personalizados</strong> que necesites para que
+            tu celebración sea aún más única, está sujeta a condiciones de disponibilidad.<br><br>
+            Contáctanos para la <srong>consulta de tarifas</srong> y recibir una oferta personalizada.
+          </p>
         </div>
 
         <!-- Modal genérico -->
@@ -166,12 +191,12 @@
               <ul class="contact__details">
                 <li>
                   <span class="icon">📞</span
-                  ><a href="tel:600123456">600 123 456</a>
+                  ><a href="tel:600123456">+34 624 066 234</a>
                 </li>
                 <li>
                   <span class="icon">✉️</span
-                  ><a href="mailto:info@minivesokids.es"
-                    >info@minivesokids.com</a
+                  ><a href="mailto:info@miniversokids.es"
+                    >info@miniversokids.com</a
                   >
                 </li>
                 <li>
@@ -256,7 +281,7 @@
             <!-- 3. Dirección + Mapa a todo ancho -->
             <div class="contact__map-container">
               <p class="contact__address">
-                <span class="icon">📍</span>Polígono CITEC<br />Vicente Traver y
+                <span class="icon">📍</span>Parque Tecnológico CITEC<br />Calle Vicente Traver y
                 Tomás 9<br />41120 Gelves (Sevilla)
               </p>
               <div class="contact__map">
@@ -281,7 +306,7 @@
           <ul class="footer__contact">
             <li>
               <span class="icon">📞</span>
-              <a href="tel:600123456">600 123 456</a>
+              <a href="tel:624066234">624 066 234</a>
             </li>
             <li>
               <span class="icon">✉️</span>
@@ -300,7 +325,7 @@
           <h3>Síguenos en Redes</h3>
           <div class="footer__social">
             <a
-              href="https://wa.me/34600123456"
+              href="https://wa.me/34624066234"
               class="social__link"
               aria-label="WhatsApp"
               target="_blank"
@@ -318,7 +343,7 @@
               <img src="assets/facebook.png" alt="Facebook" />
             </a>
             <a
-              href="https://www.instagram.com/tu_usuario"
+              href="https://www.instagram.com/miniversokidsadventures/"
               class="social__link"
               aria-label="Instagram"
               target="_blank"
@@ -327,7 +352,7 @@
               <img src="assets/instagram.png" alt="Instagram" />
             </a>
             <a
-              href="https://www.tiktok.com/@tu_usuario"
+              href="https://www.tiktok.com/@miniversokids"
               class="social__link"
               aria-label="TikTok"
               target="_blank"
