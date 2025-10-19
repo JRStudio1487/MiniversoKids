@@ -330,7 +330,15 @@ body {
 /* Ajuste para móvil */
 @media (max-width: 768px) {
   .navbar__logo {
-    height: 40px; /* un poco más pequeño en pantallas estrechas */
+    height: 100px; /* más grande en móviles */
+    margin: 0 auto; /* lo empuja al centro */
+    display: block;
+  }
+  .navbar__spacer {
+    display: none; /* quita el empuje */
+  }
+  .navbar__container {
+    justify-content: center; /* centra el logo */
   }
 }
 
