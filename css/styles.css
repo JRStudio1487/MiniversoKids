@@ -347,7 +347,7 @@ body {
 .hero {
   position: relative;
   height: 80vh;
-  background: url("../assets/underconstruction2.png") center/cover no-repeat
+  background: url("../assets/fotos/fachada.png") center/cover no-repeat
     fixed;
   display: flex;
   align-items: center;
@@ -817,7 +817,7 @@ html {
 
 /* 6. GALERIA */
 /* Carrusel */
-.carousel {
+/* .carousel {
   position: relative;
   overflow: hidden;
 }
@@ -830,12 +830,70 @@ html {
   user-select: none;
 }
 .carousel__item img {
-  width: 100%;
+  width: 50%;
   height: auto;
   display: block;
   object-fit: cover;
   border-radius: var(--radius);
+} */
+
+.carousel {
+  /* Ajusta estos valores a tu diseño */
+  --item-w: 800px;     /* ancho fijo de cada imagen */
+  --item-h: 500px;     /* alto fijo (o usa auto + ratio) */
+  --gap: 16px;         /* separación entre imágenes */
+  --n: 5;              /* nº de imágenes únicas del grupo A */
+  --duration: 10s;     /* velocidad de la cinta */
+
+  /* Ancho exacto del grupo A: n * (w + gap) - gap final */
+  --group-w: calc(var(--n) * (var(--item-w) + var(--gap)));
+
+  position: relative;
+  overflow: hidden;
 }
+
+.carousel__track {
+  display: flex;
+  width: calc(2 * var(--group-w));       /* A + A */
+  will-change: transform;
+  animation: scroll var(--duration) linear infinite;
+}
+
+.carousel__group {
+  display: flex;
+  width: var(--group-w);                /* ancho exacto del grupo A */
+  gap: var(--gap);                      /* NO uses margin-right en items */
+  padding-right: var(--gap);            /* gap extra al final del grupo */
+  box-sizing: content-box;              /* ¡importante! suma el padding al ancho */
+}
+
+.carousel__item {
+  flex: 0 0 var(--item-w);                /* ancho fijo por item */
+}
+
+.carousel__item img {
+  display: block;
+  width: 100%;
+  height: var(--item-h);
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+/* La magia: desplazar exactamente el ancho del grupo A */
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(-1 * var(--group-w))); }
+}
+
+/* Opcional: pausa al pasar el ratón */
+.carousel__track:hover { animation-play-state: paused; }
+
+/* Accesibilidad: respeta reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .carousel__track { animation: none; }
+}
+
+
 
 /* Botones */
 .carousel__btn {
