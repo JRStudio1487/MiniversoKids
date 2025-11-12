@@ -96,13 +96,20 @@
   font-style: normal;
   font-display: swap;
 }
-
+/* AvengeanceHeroic Font */
+@font-face {
+  font-family: "AvengeanceHeroic";
+  src: url("../assets/fonts/AvengeanceHeroic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* Variables de tipografía */
 :root {
   --font-primary: "Share Tech", sans-serif;
   /* --font-fun: "Bubbler One", cursive; */
-  --font-logo: "GameBubble", var(--font-fun);
+  --font-logo: "AvengeanceHeroic", var(--font-fun);
 }
 /* Fondo global con imagen */
 body {
@@ -256,7 +263,7 @@ body {
 /* 1.5. Estilo de cada enlace */
 .navbar__links li a {
   display: inline-block; /* imprescindible */
-  font-family: "GameBubble", sans-serif;
+  font-family: "SupersonicRocketship", sans-serif;
   font-size: 1.1rem; /* ajústalo a tu gusto */
   color: #fff; /* asegúrate buen contraste */
   text-decoration: none; /* quita subrayado */
@@ -327,23 +334,8 @@ body {
   max-height: 100%; /* para no salirse si cambias el navbar */
   margin-right: var(--gap); /* separa el logo del resto de enlaces */
 }
-/* Ajuste para móvil */
-@media (max-width: 768px) {
-  .navbar__logo {
-    height: 100px; /* más grande en móviles */
-    margin: 0 auto; /* lo empuja al centro */
-    display: block;
-  }
-  .navbar__spacer {
-    display: none; /* quita el empuje */
-  }
-  .navbar__container {
-    justify-content: center; /* centra el logo */
-  }
-}
 
 /* 2. HERO */
-/* ─── Hero “Under Construction” ─── */
 .hero {
   position: relative;
   height: 80vh;
@@ -371,7 +363,7 @@ body {
   padding: 0 1rem;
 }
 .hero__content h1 {
-  font-family: "GameBubble", sans-serif;
+  font-family: "SupersonicRocketship", sans-serif;
   font-size: clamp(2rem, 6vw, 3rem);
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -398,54 +390,11 @@ body {
 }
 
 /* 3. ABOUT US */
-/* 3.1. About Section (“Quiénes somos”)
-.about {
-  background: rgba(0, 0, 0, 0.4); 
-  ligero overlay oscuro
-  color: #fff;
-  padding: 4rem 0;
-}
-.about__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: var(--gap);
-}
-.about__image img {
-  width: 100%;
-  border-radius: var(--radius);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-.about__content h2 {
-  font-family: 'Starbim', sans-serif;
-  font-size: 2.25rem;
-  color: var(--color-secondary);
-  margin-bottom: 1rem;
-}
-.about__content p {
-  font-family: 'Share Tech', sans-serif;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  line-height: 1.5;
-  opacity: 0.9;
-}
-3.2. Responsive: apila en móvil
-@media (max-width: 768px) {
-  .about__container {
-    grid-template-columns: 1fr;
-  }
-  .about__content {
-    text-align: center;
-  }
-} */
-
-/* ─── Sección “Quiénes somos” revisada ─── */
 #quienes-somos {
   padding-top: 5rem; /* espacio extra sobre el hero */
 }
-
 .about__slogan {
-  font-family: "GameBubble", sans-serif;
+  font-family: "SupersonicRocketship", sans-serif;
   font-size: clamp(2rem, 6vw, 3rem);
   color: var(--color-secondary);
   text-align: center;
@@ -453,7 +402,6 @@ body {
   padding: 0 1rem;
   text-transform: uppercase;
 }
-
 .about__text {
   font-family: "Share Tech", sans-serif;
   font-size: 1.6rem;
@@ -467,40 +415,6 @@ body {
   opacity: 0.9;
 }
 
-/* Contenedor del equipo */
-/* .team__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  padding-bottom: 4rem;
-}
-.team__member {
-  background: rgba(0, 0, 0, 0.4);
-  padding: 2rem 1rem;
-  border-radius: var(--radius);
-  text-align: center;
-}
-.team__member img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-.team__member h3 {
-  font-family: "Starbim", sans-serif;
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-  color: var(--color-primary);
-}
-.team__member p {
-  font-family: "Share Tech", sans-serif;
-  font-size: 1.3em;
-  line-height: 1.5;
-  opacity: 0.9;
-} */
-
 /* ─── Equipo Miniverso (About Us) ─── */
 .team__container {
   max-width: var(--max-width);
@@ -510,7 +424,6 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
-
 .team__member {
   background: rgba(255, 255, 255, 0.1);
   border-radius: var(--radius);
@@ -521,12 +434,10 @@ body {
   align-items: center;
   transition: transform var(--transition), background var(--transition);
 }
-
 /* .team__member:hover {
   transform: translateY(-5px);
   background: rgba(255, 255, 255, 0.2);
 } */
-
 .team__avatar {
   width: 200px;
   height: auto;
@@ -538,30 +449,26 @@ body {
   border: 3px solid;
   border-color: #999b9b;
 }
-
 .team__name {
   font-family: "Share Tech", sans-serif;
   font-size: 2rem;
   margin-bottom: 0.25rem;
   color: #fff;
 }
-
 .team__role {
-  font-family: "GameBubble", sans-serif;
+  font-family: "SupersonicRocketship", sans-serif;
   font-size: 1.6rem;
   /* opacity: 0.8; */
   margin-bottom: 0.75rem;
   color: #fff;
   text-transform: uppercase;
 }
-
 .team__slogan {
   font-family: "Share Tech", sans-serif;
   font-size: 1.2rem;
   color: var(--color-primary);
   margin-bottom: 0.5rem;
 }
-
 .team__bio {
   font-family: "Share Tech", sans-serif;
   font-size: 1.2rem;
@@ -571,15 +478,7 @@ body {
   width: 80%;
 }
 
-/* Responsive: apilar en móvil */
-@media (max-width: 768px) {
-  .team__container {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* 4. SERVICES */
-/* 4.1. “Nuestros Servicios” */
 .services {
   background: rgba(0, 0, 0, 0.4);
   color: #fff;
@@ -587,7 +486,7 @@ body {
 }
 .section__title {
   text-align: center;
-  font-family: "GameBubble", sans-serif;
+  font-family: "SupersonicRocketship", sans-serif;
   font-size: clamp(2rem, 5vw, 2.5rem);
   color: var(--color-secondary);
   margin-bottom: 2rem;
@@ -630,7 +529,6 @@ body {
   text-align: center;
   margin: 2rem 0 2rem; /* espacio arriba y abajo */
 }
-
 .services__extra-text {
   font-family: "Share Tech", sans-serif;
   font-size: 1.5rem;
@@ -639,7 +537,6 @@ body {
   margin: 4rem auto;
   max-width: 600px;
 }
-
 /* Reutilizamos estilos de .contact__btn para el botón */
 .services__extra .contact__btn {
   font-family: "Share Tech", sans-serif;
@@ -651,7 +548,6 @@ body {
 }
 
 /* 5. EXTRAS */
-/* Botón “Volver” en Extras */
 .extras__back {
   font-family: "Share Tech", sans-serif;
   font-size: 1rem;
@@ -665,20 +561,14 @@ body {
   margin-bottom: 1.5rem; /* separa del título */
   display: inline-block;
 }
-
-/* Hover igual que el resto */
 .extras__back:hover {
   background: linear-gradient(45deg, #ffd700 0%, #b8860b 100%);
   transform: translateY(-2px);
   color: black;
 }
-
 /* Para que no quede oculto tras el navbar al hacer scroll o volver */
-html {
-  scroll-padding-top: 80px; /* ajusta a la altura de tu navbar */
-}
+html { scroll-padding-top: 80px; }
 
-/* ─── Extras ─── */
 .extras {
   background: rgba(0, 0, 0, 0.4);
   color: #fff;
@@ -686,7 +576,7 @@ html {
 }
 .extras .section__title {
   text-align: center;
-  font-family: "GameBubble", sans-serif;
+  font-family: "SupersonicRocketship", sans-serif;
   font-size: clamp(2rem, 5vw, 2.5rem);
   color: var(--color-secondary);
   margin-bottom: 1rem;
@@ -715,16 +605,10 @@ html {
   display: flex;
   flex-direction: column;
 }
-.extras__card:hover {
-  /* transform: translateY(-5px); */
-  background: rgba(255, 255, 255, 0.2);
-}
-.extras__icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
+.extras__card:hover { background: rgba(255, 255, 255, 0.2); }
+.extras__icon { font-size: 2.5rem; margin-bottom: 1rem; }
 .extras__card h2 {
-  font-family: "GameBubble", sans-serif;
+  font-family: "SupersonicRocketship", sans-serif;
   margin-bottom: 0.5rem;
   font-size: 1.25rem;
   color: var(--color-primary);
@@ -736,7 +620,6 @@ html {
   line-height: 1.4;
   opacity: 0.9;
 }
-/* ─── Botones “Ver opciones” en Extras ─── */
 .extras__btn-more {
   display: inline-block;
   font-family: "Share Tech", sans-serif;
@@ -751,126 +634,38 @@ html {
   margin-top: auto;
   text-align: center;
 }
-
 .extras__btn-more:hover {
   background: linear-gradient(45deg, #ffd700 0%, #b8860b 100%);
   transform: translateY(-2px);
   color: black;
 }
 
-/* ─── Modal de Extras ─── */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
-}
-.modal.hidden {
-  display: none;
-}
-.modal__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-}
-.modal__content {
-  position: relative;
-  background: #fff;
-  color: #333;
-  padding: 2rem;
-  border-radius: var(--radius);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  max-width: 400px;
-  width: 90%;
-  max-height: 80vh;
-  overflow-y: auto;
-}
-.modal__close {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.75rem;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-.modal__content h2 {
-  font-family: "GameBubble", sans-serif;
-  margin-top: 0;
-  color: var(--color-secondary);
-  text-transform: uppercase;
-}
-.modal__content ul {
-  font-family: "Share Tech", sans-serif;
-  list-style: disc inside;
-  margin-top: 1rem;
-  padding-left: 1rem;
-}
-
 /* 6. GALERIA */
-/* Carrusel */
-/* .carousel {
-  position: relative;
-  overflow: hidden;
-}
-.carousel__inner {
-  display: flex;
-  transition: transform 0.4s ease;
-}
-.carousel__item {
-  min-width: 100%;
-  user-select: none;
-}
-.carousel__item img {
-  width: 50%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  border-radius: var(--radius);
-} */
-
+/* Carrusel continuo */
 .carousel {
-  /* Ajusta estos valores a tu diseño */
-  --item-w: 800px;     /* ancho fijo de cada imagen */
-  --item-h: 500px;     /* alto fijo (o usa auto + ratio) */
-  --gap: 16px;         /* separación entre imágenes */
-  --n: 5;              /* nº de imágenes únicas del grupo A */
-  --duration: 10s;     /* velocidad de la cinta */
-
-  /* Ancho exacto del grupo A: n * (w + gap) - gap final */
+  --item-w: 800px;
+  --item-h: 500px;
+  --gap: 16px;
+  --n: 5;
+  --duration: 10s;
   --group-w: calc(var(--n) * (var(--item-w) + var(--gap)));
-
   position: relative;
   overflow: hidden;
 }
-
 .carousel__track {
   display: flex;
-  width: calc(2 * var(--group-w));       /* A + A */
+  width: calc(2 * var(--group-w));
   will-change: transform;
   animation: scroll var(--duration) linear infinite;
 }
-
 .carousel__group {
   display: flex;
-  width: var(--group-w);                /* ancho exacto del grupo A */
-  gap: var(--gap);                      /* NO uses margin-right en items */
-  padding-right: var(--gap);            /* gap extra al final del grupo */
-  box-sizing: content-box;              /* ¡importante! suma el padding al ancho */
+  width: var(--group-w);
+  gap: var(--gap);
+  padding-right: var(--gap);
+  box-sizing: content-box;
 }
-
-.carousel__item {
-  flex: 0 0 var(--item-w);                /* ancho fijo por item */
-}
-
+.carousel__item { flex: 0 0 var(--item-w); }
 .carousel__item img {
   display: block;
   width: 100%;
@@ -878,24 +673,16 @@ html {
   object-fit: cover;
   border-radius: var(--radius);
 }
-
-/* La magia: desplazar exactamente el ancho del grupo A */
 @keyframes scroll {
   from { transform: translateX(0); }
   to   { transform: translateX(calc(-1 * var(--group-w))); }
 }
-
-/* Opcional: pausa al pasar el ratón */
-.carousel__track:hover { animation-play-state: paused; }
-
 /* Accesibilidad: respeta reduce motion */
 @media (prefers-reduced-motion: reduce) {
   .carousel__track { animation: none; }
 }
 
-
-
-/* Botones */
+/* Botones del carrusel (desktop base) */
 .carousel__btn {
   position: absolute;
   top: 50%;
@@ -913,61 +700,36 @@ html {
   justify-content: center;
   transition: background 0.2s;
 }
-.carousel__btn:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-.carousel__btn.prev {
-  left: 1rem;
-}
-.carousel__btn.next {
-  right: 1rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .carousel__btn {
-    width: 2rem;
-    height: 2rem;
-    font-size: 1.25rem;
-  }
-}
+.carousel__btn:hover { background: rgba(0, 0, 0, 0.8); }
+.carousel__btn.prev { left: 1rem; }
+.carousel__btn.next { right: 1rem; }
 
 /* 7. CONTACT */
-/* ─── Sección “Contacto” — CSS Completo Ajustado ─── */
 .contact {
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
   padding: 4rem 0;
 }
-
-/* Título centrado */
 .contact__title {
   text-align: center;
-  font-family: "GameBubble", sans-serif;
+  font-family: "SupersonicRocketship", sans-serif;
   font-size: clamp(2rem, 6vw, 3rem);
   color: var(--color-secondary);
   margin-bottom: 3rem;
   text-transform: uppercase;
 }
-
-/* Contenedor principal: dos columnas + una fila para el mapa */
 .contact__inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "channels form"
     "mapcont  mapcont";
-  /* gap: columna-gap fila-gap */
   gap: var(--gap) calc(var(--gap) * 3);
   max-width: 800px;
   margin: 0 auto;
   padding: 0 1rem;
 }
-
-/* — Canales (izquierda, fila 1) — */
-.contact__channels {
-  grid-area: channels;
-}
+.contact__channels { grid-area: channels; }
 .contact__details {
   font-family: "Share Tech", sans-serif;
   font-size: 1.3rem;
@@ -976,43 +738,28 @@ html {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 1rem; /* espacio reducido */
+  gap: 1rem;
 }
-.contact__details li {
-  display: flex;
-  align-items: center;
-}
-.contact__details .icon {
-  margin-right: 0.5rem;
-  font-size: 1.25rem;
-}
+.contact__details li { display: flex; align-items: center; }
+.contact__details .icon { margin-right: 0.5rem; font-size: 1.25rem; }
 /* Igualar tamaño de imagen de WhatsApp al resto de iconos */
 .contact__details li img {
   width: 5rem;
   height: 5rem;
   object-fit: contain;
-  margin-right: 0.75rem; /* igual que .icon */
+  margin-right: 0.75rem;
   display: flex;
   align-items: center;
   margin-top: 2rem;
   margin-left: 5rem;
 }
+.contact__details a { text-decoration: none; color: #fff; transition: color var(--transition); }
+.contact__details a:hover { color: var(--color-secondary); }
 
-.contact__details a {
-  text-decoration: none;
-  color: #fff;
-  transition: color var(--transition);
-}
-.contact__details a:hover {
-  color: var(--color-secondary);
-}
-
-/* — Formulario (derecha, fila 1) — */
 .contact__form {
   grid-area: form;
   background: none;
   box-shadow: none;
-  /* ocupa todo su hueco */
   margin: 0;
   padding: var(--gap);
   display: flex;
@@ -1020,9 +767,7 @@ html {
   gap: var(--gap);
   font-family: "Share Tech", sans-serif;
 }
-.input-group {
-  position: relative;
-}
+.input-group { position: relative; }
 .input-group input,
 .input-group textarea {
   width: 100%;
@@ -1036,9 +781,7 @@ html {
   transition: border-color var(--transition);
 }
 .input-group input:focus,
-.input-group textarea:focus {
-  border-color: var(--color-secondary);
-}
+.input-group textarea:focus { border-color: var(--color-secondary); }
 .input-group label {
   position: absolute;
   top: 1rem;
@@ -1046,8 +789,7 @@ html {
   color: rgba(255, 255, 255, 0.8);
   font-size: 1rem;
   pointer-events: none;
-  transition: transform var(--transition), font-size var(--transition),
-    color var(--transition);
+  transition: transform var(--transition), font-size var(--transition), color var(--transition);
 }
 .input-group input:focus + label,
 .input-group input:not(:placeholder-shown) + label,
@@ -1075,8 +817,6 @@ html {
   color: black;
   transform: scale(1.05);
 }
-
-/* Mensaje de agradecimiento */
 .contact__thanks {
   text-align: center;
   font-family: "Share Tech", sans-serif;
@@ -1084,30 +824,26 @@ html {
   color: var(--color-secondary);
   margin-top: var(--gap);
 }
-
-/* — Mapa y dirección (fila 2) — */
 .contact__map-container {
   grid-area: mapcont;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--gap);
-  align-items: center; /* centra dirección/mapa en altura */
+  align-items: center;
   width: 100%;
   max-width: 800px;
-  margin: 3rem auto; /* centrado horizontal */
+  margin: 3rem auto;
   padding: 0 1rem;
 }
 .contact__address {
   display: flex;
-  align-items: center; /* centro vertical */
+  align-items: center;
   font-family: "Share Tech", sans-serif;
   font-size: 1.5rem;
   color: #fff;
   gap: 0.5rem;
 }
-.contact__address .icon {
-  font-size: 1.5rem;
-}
+.contact__address .icon { font-size: 1.5rem; }
 .contact__map {
   width: 100%;
   height: 300px;
@@ -1121,35 +857,12 @@ html {
   border: 0;
 }
 
-/* — Responsive — */
-@media (max-width: 768px) {
-  .contact__inner {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "channels"
-      "form"
-      "mapcont";
-  }
-  .contact__form {
-    padding: 1rem;
-  }
-  .contact__map-container {
-    grid-template-columns: 1fr;
-    max-width: 100%;
-  }
-  .contact__map {
-    height: 200px;
-  }
-}
-
 /* 8. FOOTER */
 .footer {
   background: rgba(0, 0, 0, 0.9);
   color: #fff;
   padding: 3rem 0 2rem;
 }
-
-/* Contenedor de columnas */
 .footer__container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -1158,61 +871,39 @@ html {
   margin: 0 auto;
   padding: 0 1rem;
 }
-
-/* Títulos de columna */
 .footer__col h3 {
-  font-family: "GameBubble", sans-serif;
+  font-family: "SupersonicRocketship", sans-serif;
   font-size: 1.5rem;
   color: var(--color-secondary);
   margin-bottom: 1rem;
   text-transform: uppercase;
 }
-
-/* Contacto y enlaces */
-.footer__contact,
-.footer__links {
+.footer__contact, .footer__links {
   font-family: "Share Tech", sans-serif;
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.footer__contact li,
-.footer__links li {
+.footer__contact li, .footer__links li {
   margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
 }
-.footer__contact .icon,
-.footer__links a {
-  margin-right: 0.5rem;
-}
-.footer__contact a,
-.footer__links a {
+.footer__contact .icon, .footer__links a { margin-right: 0.5rem; }
+.footer__contact a, .footer__links a {
   color: #fff;
   text-decoration: none;
   transition: color var(--transition);
 }
-.footer__contact a:hover,
-.footer__links a:hover {
-  color: var(--color-secondary);
-}
-
-/* Redes sociales */
-.footer__social {
-  display: flex;
-  gap: 1rem;
-}
+.footer__contact a:hover, .footer__links a:hover { color: var(--color-secondary); }
+.footer__social { display: flex; gap: 1rem; }
 .footer__social .social__link img {
   width: 2rem;
   height: auto;
   object-fit: contain;
   transition: transform var(--transition);
 }
-.footer__social .social__link:hover img {
-  transform: scale(1.1);
-}
-
-/* Pie de página inferior */
+.footer__social .social__link:hover img { transform: scale(1.1); }
 .footer__bottom {
   font-family: "Share Tech", sans-serif;
   margin-top: 2rem;
@@ -1221,19 +912,8 @@ html {
   opacity: 0.7;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .footer__container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .footer__social {
-    justify-content: center;
-  }
-}
-
 /* z. DISPOSITIVOS MOVILES */
-/* z.1. Toggle para móvil */
+/* z.1. Toggle base (desktop hidden por defecto) */
 .navbar__toggle {
   display: none;
   margin-left: var(--gap);
@@ -1243,23 +923,215 @@ html {
   cursor: pointer;
 }
 
-/* z.2. Responsive: móvil */
-@media (max-width: 768px) {
-  .navbar__links {
+/* ======================================================
+   BLOQUE RESPONSIVE NUEVO (móvil ≤768px) + ajustes tablet
+====================================================== */
+
+/* NAVBAR móvil: hamburger | LOGO | bandera */
+@media (max-width: 768px){
+  .navbar__container{
+    display: grid !important;
+    grid-template-columns: 48px 1fr 48px; /* izq (☰) | centro (logo) | dcha (bandera) */
+    align-items: center;
+    gap: 0;
+    padding: .5rem 0;
+  }
+  .navbar__brand{ grid-column: 2; justify-self: center; }
+  .navbar__logo{ height: 72px; width:auto; display:block; }
+
+  .navbar__toggle{
+    grid-column: 1; justify-self: start;
+    display: block;
+    font-size: 1.8rem; line-height: 1; padding: .25rem .5rem;
+    background: transparent; border: 0; color: #fff;
+  }
+
+  .language-switcher{ grid-column: 3; justify-self: end; }
+
+  /* Menú móvil deslizante (mantiene tu clase --open) */
+  .navbar__links{
     position: absolute;
     top: 100%;
     right: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(2px);
+    list-style: none;
+    display: flex;
     flex-direction: column;
-    width: 200px;
+    width: min(72vw, 280px);
     padding: 1rem;
+    gap: .25rem;
     transform: translateX(100%);
-    transition: transform var(--transition);
+    transition: transform var(--transition, .3s ease);
+    border-bottom-left-radius: var(--radius);
   }
-  .navbar__links--open {
-    transform: translateX(0);
+  .navbar__links.navbar__links--open{ transform: translateX(0); }
+
+  .navbar__spacer{ display: none !important; }
+}
+
+/* Desktop: asegura layout normal */
+@media (min-width: 769px){
+  .navbar__container{ display:flex; align-items:center; }
+  .navbar__logo{ height:100px; width:auto; }
+}
+
+/* Evita que el navbar fijo tape el contenido en móvil */
+@media (max-width: 768px){
+  main{ padding-top: 108px; }
+}
+
+/* Imágenes globales seguras */
+img{ max-width:100%; height:auto; display:block; }
+
+/* Hero: legibilidad móvil */
+@media (max-width: 768px){
+  .hero__content h1{ font-size: clamp(1.6rem, 6.5vw, 2.1rem); line-height: 1.15; }
+  .hero__content p{ font-size: clamp(.98rem, 3.8vw, 1.06rem); line-height: 1.45; margin-top: .35rem; }
+}
+
+/* Extras grid responsive */
+@media (max-width: 1024px){
+  .extras__grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 640px){
+  .extras__grid{ grid-template-columns: 1fr; }
+}
+
+/* Cards de extras: tipografía móvil */
+@media (max-width: 768px){
+  .extras__icon{ font-size: clamp(1.6rem, 7vw, 2.2rem); line-height: 1; }
+  .extras__card h2{ font-size: clamp(1.1rem, 4.8vw, 1.35rem); line-height: 1.15; }
+  .extras__card p{ font-size: clamp(.95rem, 3.8vw, 1.05rem); line-height: 1.4; }
+  .extras__btn-more{ min-height: 44px; }
+  .extras__back{ min-height: 44px; }
+}
+
+/* Carrusel: tamaños en móvil/tablet */
+@media (max-width: 1024px){
+  .carousel{ --item-w: 480px; --item-h: 300px; --gap: 14px; --duration: 12s; }
+}
+@media (max-width: 768px){
+  .carousel{ --item-w: 220px; --item-h: 150px; --gap: 12px; --duration: 14s; }
+  .carousel__btn{ width: 2rem; height: 2rem; font-size: 1.25rem; }
+}
+
+/* Contacto: columnas a 1 y mapa responsive */
+@media (max-width: 768px){
+  .contact__inner{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "channels"
+      "form"
+      "mapcont";
   }
-  .navbar__toggle {
-    display: block;
-  }
+  .contact__form{ padding: 1rem; }
+  .contact__map-container{ grid-template-columns: 1fr; max-width: 100%; }
+  .contact__map{ height: auto; }
+  .contact__map iframe{ width: 100%; border: 0; aspect-ratio: 16 / 9; }
+}
+
+/* Footer: columnas a una y redes centradas */
+@media (max-width: 768px){
+  .footer__container{ grid-template-columns: 1fr; text-align: center; }
+  .footer__social{ justify-content: center; }
+}
+
+/* Contenedor: respiración lateral móvil */
+@media (max-width: 768px){
+  .container{ padding-inline: 16px; }
+}
+
+/* Transiciones suaves */
+.navbar__logo, .language-switcher__current img{ transition: transform .3s ease; }
+.language-switcher__current:hover img{ transform: scale(1.06); }
+
+/* Accesibilidad global */
+@media (prefers-reduced-motion: reduce){
+  *{ animation:none !important; transition:none !important; }
+}
+
+/* Asegura que el contenido esté por encima del overlay */
+.modal { z-index: 2000; }
+.modal__overlay { z-index: 0; }
+.modal__content { position: relative; z-index: 1; }
+
+/* Bloqueo de scroll sin “atascar” la página */
+body.modal-open { position: fixed; width: 100%; overflow: hidden; }
+
+/* ===== MODAL (forzado y robusto) ===== */
+.modal{
+  position: fixed;
+  inset: 0;              /* top/right/bottom/left: 0 */
+  display: none;         /* por defecto oculto */
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.modal.is-open{ display: flex; }
+
+.modal__overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  pointer-events: auto;
+}
+.modal__content{
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  color: #333;
+  max-width: 420px;
+  width: 90%;
+  max-height: 80vh;
+  overflow: auto;
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,.3);
+}
+.modal__close{
+  position: absolute;
+  top: .5rem;
+  right: .75rem;
+  background: none;
+  border: 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+/* === Tipografía del modal (restaurada) === */
+.modal__content {
+  /* cuerpo del modal: la de párrafos/listas */
+  font-family: "Share Tech", sans-serif;
+  color: #333; /* ya lo tenías */
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#modal-title {
+  /* título del modal: tu display font */
+  font-family: "SupersonicRocketship", sans-serif;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  margin: 0 0 .75rem 0;
+  font-size: 1.4rem;
+}
+
+.modal__content ul {
+  /* por si otra regla lo pisa */
+  font-family: "Share Tech", sans-serif;
+  margin: .5rem 0 0 0;
+  padding-left: 1.2rem;
+}
+
+.modal__content li {
+  margin: .35rem 0;
+}
+
+
+/* Bloqueo de scroll en body sin “quedarse arriba” */
+body.modal-open{ overflow: hidden; }
+
+/* (Opcional) iOS: evita rebotes raros */
+@supports (-webkit-touch-callout: none) {
+  .modal__content{ -webkit-overflow-scrolling: touch; }
 }
