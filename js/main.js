@@ -198,19 +198,23 @@ document.addEventListener("DOMContentLoaded", () => {
     // Contenido por tipo (coincidir con data-extra)
     const EXTRAS = {
       decoracion: [
-        "Arco/pack de globos básico",
-        "Guirnaldas y banderines",
-        "Photocall temático",
+        "Globos",
+        "Arcos",
+        "Guirnaldas temáticas",
+        "Photocall",
+        "Vinilos decorativos"
       ],
       carrito: [
-        "Carrito de chuches básico",
-        "Mesa dulce temática",
-        "Donuts & cookies corner",
+        "Decoración personalizada",
+        "Donuts",
+        "Galletas",
+        "Chuches"
       ],
       bebidas: [
-        "Agua, refrescos y zumos",
-        "Hielo y vasos",
-        "Bebidas frías en general",
+        "Refrescos surtidos",
+        "Zumos",
+        "Bebidas alcohólicas (* Sólo para adultos)",
+        "Hielo y vasos"
       ]
     };
 
