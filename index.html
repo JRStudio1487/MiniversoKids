@@ -28,12 +28,12 @@
             <picture>
               <!-- Logo móvil cuando el viewport sea ≤768px -->
               <source
-                srcset="assets/logo_mob_2025_xmas.png"
+                srcset="assets/logo_2025"
                 media="(max-width: 768px)"
               />
               <!-- Logo de escritorio por defecto -->
               <img
-                src="assets/logo_2025_xmas.png"
+                src="assets/logo_2025.png"
                 alt="Miniverso Kids"
                 class="navbar__logo"
               />
@@ -41,32 +41,32 @@
           </a>
 
           <!-- Espaciador flexible para empujar el resto a la derecha -->
-          <div class="navbar__spacer"></div>
+          <!-- <div class="navbar__spacer"></div> -->
 
           <!-- Enlaces de navegación -->
-          <ul class="navbar__links">
+          <!-- <ul class="navbar__links">
             <li><a href="#home">Inicio</a></li>
             <li><a href="#quienes-somos">Quiénes somos</a></li>
             <li><a href="#servicios">Servicios</a></li>
             <li><a href="extras.html#extras">Extras</a></li>
-            <!-- <li><a href="#galeria">Galería</a></li> -->
+            <li><a href="#galeria">Galería</a></li>
             <li><a href="#contacto">Contacto</a></li>
-          </ul>
+          </ul> -->
 
           <!-- Language switcher -->
-          <div class="language-switcher">
+          <!-- <div class="language-switcher"> -->
             <!-- Bandera activa -->
-            <button
+            <!-- <button
               class="language-switcher__current"
               aria-label="Select language"
             >
               <img src="assets/es.png" alt="ES" width="24" />
-            </button>
+            </button> -->
             <!-- Dropdown con todas las opciones -->
-            <ul class="language-switcher__dropdown">
+            <!-- <ul class="language-switcher__dropdown">
               <li class="language-switcher__option" data-lang="es">
                 <img src="assets/es.png" alt="ES" width="24" />
-              </li>
+              </li> -->
               <!-- <li class="language-switcher__option" data-lang="us">
                 <img src="assets/us.png" alt="US" width="24" />
               </li>
@@ -76,11 +76,11 @@
               <li class="language-switcher__option" data-lang="it">
                 <img src="assets/it.png" alt="IT" width="24" />
               </li> -->
-            </ul>
-          </div>
+            <!-- </ul>
+          </div> -->
 
           <!-- Toggle móvil -->
-          <button class="navbar__toggle" aria-label="Abrir menú">☰</button>
+          <!-- <button class="navbar__toggle" aria-label="Abrir menú">☰</button> -->
         </div>
       </nav>
     </header>
@@ -99,15 +99,16 @@
       <section id="home" class="hero">
         <div class="hero__overlay">
           <div class="hero__content container">
-            <h1>¡¡ Ya abrimos nuestras puertas !!</h1>
-            <p>Ven a vivir la experiencia <strong>Miniverso Kids</strong>: un espacio único para tus celebraciones infantiles con parque de bolas, toboganes, colchonetas y zona exclusiva para adultos</p>
-            <p>Todas nuestras fiestas son <strong>privadas</strong>
+            <h1>Lamentablemente no podemos continuar</h1>
+            <p>Por motivos particulares y familiares, nos vemos en la necesidad de no poder seguir dando el servicio que hasta ahora proporcionábamos.</p>
+
+            <p>Esperamos disculpen las molestias</p>
           </div>
         </div>
       </section>
 
       <!-- QUIÉNES SOMOS -->
-      <section id="quienes-somos" class="about section">
+      <section hidden id="quienes-somos" class="about section">
         <div class="container">
           <!-- Slogan a toda página -->
           <p class="about__slogan">
@@ -179,7 +180,7 @@
       </section>
 
       <!-- SERVICIOS PRINCIPALES -->
-      <section id="servicios" class="services section">
+      <section hidden id="servicios" class="services section">
         <div class="container">
           <p class="section__title">Nuestros Servicios</p>
           <div class="services__container">
@@ -243,7 +244,7 @@
       <!-- En otro .html -->
 
       <!-- GALERÍA (placeholder) -->
-      <section id="galeria" class="gallery section">
+      <section hidden id="galeria" class="gallery section">
         <div class="container">
           <p class="section__title">Galería</p>
           <div class="carousel">
@@ -272,7 +273,7 @@
       </section>
 
       <!-- CONTACTO -->
-      <section id="contacto" class="contact section">
+      <section hidden id="contacto" class="contact section">
         <div class="container">
           <p class="contact__title">¡ Hablemos !</p>
           <div class="contact__inner">
@@ -395,7 +396,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer section">
+    <footer hidden class="footer section">
       <div class="container footer__container">
         <!-- Columna 1: Contacto -->
         <div class="footer__col">
